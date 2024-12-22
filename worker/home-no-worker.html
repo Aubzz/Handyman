@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | SBWS Worker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home-worker.css">
+</head>
+<body>
+  <main class="dashboard">
+    <!-- User Profile Card -->
+    <div class="profile-card">
+      <img id="profile-picture" src="https://toppng.com/uploads/preview/instagram-default-profile-picture-11562973083brycehrmyv.png" alt="User Profile" class="profile-pic">
+      <div class="profile-info">
+        <h2 id="profile-name">User</h2> <!-- Will be updated dynamically -->
+        <p id="profile-phone">09123-456-789</p> <!-- Will be updated dynamically -->
+        <div class="rating">
+          <span>⭐ 5.0</span>
+          <span class="status-dot"></span>
+          <span id="profile-category">Professional</span> <!-- Will be updated dynamically -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Service Requests (Draggable Section) -->
+  <div class="service-requests draggable">
+    <div class="drag-handle"></div>
+    <h3>Service Requests</h3>
+    <ul class="request-list">
+      <main class="services">
+      </main>
+    </ul>
+    <button class="view-button">
+      View All
+      <span class="notification-badge">0</span>
+    </button>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <a href="home-worker.html" class="nav-item active">
+      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEimOlv-VSNFOi-pnlgq0Jtsvf9bDZsF3eIHxbvyONJYAT-kPHUH3dXtjU8yGc6NajD7iNAiX-ekL263ogP5EoznWraZIprkPREk47X_266_Dnx8-4XC1XidHBLY-fgRyeZN8BM37W3Va5U54n39UAgRB1hrgNZ3dcvDImmheM2plajp1WfQ4HvYLk8IGA" alt="Home">
+      <p>Home</p>
+    </a>
+    <a href="bookings.html" class="nav-item">
+      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhld8IIFBvzz1Dxj82boSjt1EvfnO7l6x2G0bPnC1cyH4bfgk4OV-GzxtLiB5suaUl9CSmM0-1wUkRwUmxkkXvzBOpmgiH3G-i6k-mFRziVwk8yX_qYcuf6yBZpN8p-Rqgo3hEewcdd4c0VtpeYa1hg7bYAR2PQ5tunAraQcdAZryjaaHJU8msmmTz2Zg" alt="Bookings">
+      <p>Bookings</p>
+    </a>
+    <a href="worker-messages.html" class="nav-item">
+      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh7XVqIv5prwkdy7ZbYIlN5enr4v8raZNTrU8xdBTZU6OzQBV3SgSQCfEUw1C69HESGPLwG5a4q1c5Ed_Uk0yHYXs5WEU9J_eigAzzfJDmZIRHdgVU9BT593ybmTclAeysJ14EBNVyN8Mc9_7eKxqxt8IezQWCLoCID0FYJ_WbImPH3IeMDd6YYnwNw-w" alt="Messages">
+      <p>Messages</p>
+    </a>
+    <a href="worker-profile.html" class="nav-item">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqFjUEO0myZ4ieBl8gW4sPqvFZmg4z1QgC4Etu5hVupE1i2-wv787t2SrHXXOhjG1WIzKY-kJaNG2cQ3atOU818oAZChGNwQ65f0f4YieU2b2WFogQuRZjY1xO0tmdvuqOhuKjuEGj84cdAscimjoC1gu6Ah1F9T1uepddqaq2t0PQRwMqswf2107ebg/s1600/user%20(1).png" alt="Account">
+      <p>Account</p>
+    </button>
+  </footer>
+
+  <script src="home-worker.js"></script>
+</body>
+</html>

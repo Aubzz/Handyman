@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full height of viewport */
+}
+
+header {
+  background-color: #ff9800;
+  color: white;
+  text-align: left;
+  padding: 10px 0;
+}
+
+header h1 {
+  margin-left: 60px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  position: relative;
+  margin: 10px auto;
+  width: 90%;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 40px;
+  height: 57px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#map {
+  height: 100%; /* Take the full height available */
+  flex-grow: 1; /* Allow map to take up available space */
+}
+
+.back-button {
+  display: inline-block;
+  font-size: 25px;
+  font-family: bold;
+  color: #fff;
+  background: none;
+  border: none;
+  text-decoration: none;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #fff;
+  border-top: 1px solid #ccc; /* Optional: To create a top border */
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer .nav-item {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
+  filter: grayscale(100%);
+}
+
+.nav-item.active {
+  color: #ff9800;
+}
+
+.nav-item.active img {
+  filter: none;
+}
+
+.nav-item p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.footer .nav-item:hover {
+  color: #ff9800;
+}
+
+.footer .nav-item img:hover {
+  filter: none;
+}

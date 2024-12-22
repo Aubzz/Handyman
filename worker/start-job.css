@@ -1,0 +1,169 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.back-button {
+  border: none;
+}
+.container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.header i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h4 {
+  margin-bottom: 10px;
+  color: #ff922d;
+}
+
+.card .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card .row span {
+  font-size: 16px;
+}
+
+.card .row span:first-child {
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+  text-align: center;
+}
+
+.btn.back {
+  background: #ccc;
+  color: #fff;
+}
+
+.btn.complete {
+  background: #fcbf49;
+  color: #000;
+}
+
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+.nav-bar i {
+  font-size: 24px;
+  color: #ccc;
+}
+
+.nav-bar .active {
+  color: #fcbf49;
+}
+
+.nav-bar span {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.nav-bar .active span {
+  color: #fcbf49;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+.nav-item {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
+  filter: grayscale(100%);
+}
+
+.nav-item.active {
+  color: #ff9800;
+}
+
+.nav-item.active img {
+  filter: none;
+}
+
+.nav-item:hover {
+  color: #ff9800;
+}
+
+.nav-item img:hover {
+  filter: none;
+}

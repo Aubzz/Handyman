@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Details</title>
+    <link rel="stylesheet" href="details-approved.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <header>
+        <div class="status-bar">
+          <div class="status-icons"></div>
+        </div>
+        <div class="header-content">
+          <a
+            href="javascript:void(0);"
+            class="back-arrow"
+            onclick="window.history.back();"
+            >&#x2190;</a
+          >
+          <h1>Application Details</h1>
+        </div>
+      </header>
+
+      <!-- Main Section -->
+      <main>
+        <!-- Applicant Details Card -->
+        <div class="card">
+          <div class="avatar">
+            <img src="/admin/Images/applicant.png" />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Applicant No. 0004</p>
+          </div>
+        </div>
+
+        <!-- Information Blocks -->
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">09462548326</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Batangas</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Resume</p>
+          <a href="Fernandes_Resume.pdf" class="resume-button">
+            <img src="/admin/Images/pdf.png" alt="PDF Icon" class="pdf-icon" />
+            <span>Fernandes_Resume.pdf</span>
+          </a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

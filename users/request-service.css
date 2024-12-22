@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.request-service-page {
+  background: #fafafa;
+  text-align: left;
+  font-size: 25px;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  height: 161px;
+  background-color: #ff8c00;
+  color: white;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  color: var(--background-color);
+  font-size: 25px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Section Styling */
+section {
+  margin: 30px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Location Section */
+.location-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.location-input {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.location-input .icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  background: none;
+  flex: 1;
+}
+
+/* Date Section Styling */
+.date-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.calendar-header .calendar-nav {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.month-year {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.calendar-grid,
+.calendar-grid-dates {
+  display: grid;
+  width: 100%;
+}
+
+.calendar-grid {
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+}
+
+.calendar-grid-dates {
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-grid-dates button {
+  border: none;
+  background: none;
+  font-size: 14px;
+  width: 100%;
+  height: 40px;
+  border-radius: 90px;
+  cursor: pointer;
+  text-align: center;
+  color: #333;
+  font-family: inherit;
+}
+
+.calendar-grid-dates button.active {
+  background: #ffa726;
+  color: white;
+}
+
+.calendar-grid-dates button:hover {
+  background: rgba(255, 165, 38, 0.2);
+}
+
+.time-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.time-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+input[type="time"] {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2px;
+  width: 180px;
+  height: 30px;
+  text-align: center;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+/* Description Section */
+.description-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #e3e3e3;
+  resize: none;
+  font-family: inherit;
+}
+
+.file-preview {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.file-preview img {
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.file-preview p {
+  font-size: 12px;
+}
+
+/* Submit Button */
+.send-request-button {
+  display: block;
+  width: 90%;
+  margin: 20px auto;
+  background-color: #ff8c00;
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* modal */
+.modal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 344px;
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin-bottom: 20;
+}
+
+.modal-btn {
+  flex: 1;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.confirm-button {
+  background: linear-gradient(90deg, #ffa726, #ffcc80);
+  font-weight: 700;
+  flex: 1;
+  margin: 1.5rem 0.5rem;
+  padding: 0.7rem 1.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-icon img {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.modal-icon img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.confirm-Button {
+  background: linear-gradient(90deg, #ffa726, #ffcc80);
+  font-weight: 700;
+  flex: 1;
+  margin: 1.5rem 0.5rem;
+  padding: 0.7rem 1.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.bookings {
+  text-decoration: none;
+  color: #000;
+}

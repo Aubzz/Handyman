@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Header */
+.header {
+  background-color: #ff9000;
+  color: white;
+  padding: 32px;
+  font-size: 18px;
+  text-align: left;
+}
+
+/* Welcome Card */
+.welcome-card {
+  display: flex;
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  grid-column: span 2; /* Span across 2 columns */
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.welcome-text h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.welcome-text p {
+  font-size: 14px;
+  color: gray;
+}
+
+/* Cards Container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 15px;
+  padding: 0 15px;
+  padding-bottom: 100px;
+}
+
+/* Card Placement */
+/* Card Placement */
+.card:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+} /* Pending Applications */
+.card:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+} /* Approved Applicants */
+.card:nth-child(4) {
+  grid-column: 2;
+  grid-row: 3;
+} /* Declined Applicants */
+.card:nth-child(5) {
+  grid-column: 1;
+  grid-row: 4;
+} /* Date */
+.card:nth-child(6) {
+  grid-column: 2;
+  grid-row: 4;
+} /* Earnings Today */
+.card:nth-child(7) {
+  grid-column: span 2;
+  grid-row: 5;
+} /* Total Earnings */
+.card:nth-child(8) {
+  grid-column: 1;
+  grid-row: 6;
+} /* No. of Workers */
+.card:nth-child(9) {
+  grid-column: 2;
+  grid-row: 6;
+} /* No. of Users */
+
+/* Cards */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card p {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.icon {
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+.icon img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer .nav-item {
+  color: #aaa; /* Default gray color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-item img {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 5px;
+  filter: grayscale(100%); /* Default gray icons */
+}
+
+.nav-item.active {
+  color: #ff9800; /* Orange color for active item */
+}
+
+.nav-item.active img {
+  filter: none; /* Remove grayscale for active icon */
+}
+
+.nav-item p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.footer .nav-item:hover {
+  color: #ff9800; /* Highlight on hover */
+}
+
+.footer .nav-item img:hover {
+  filter: none;
+}

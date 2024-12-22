@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Request</title>
+    <link rel="stylesheet" href="accept-request.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="header">
+        <a
+          href="/service-request/carpentry-installation.html"
+          class="back-arrow"
+          >&#8592;</a
+        >
+        <h1 class="title">Service Request</h1>
+      </header>
+      <section class="content-container">
+        <div class="service-card">
+          <div class="user-info">
+            <!-- Profile Image -->
+            <img
+              src="Img/dianne.png"
+              alt="Dianne Taguibao"
+              class="profile-img"
+            />
+
+            <!-- User Details (Name and Number) -->
+            <div class="user-details">
+              <h4>Dianne Taguibao</h4>
+              <p>09123702655</p>
+            </div>
+
+            <!-- Message Icon -->
+            <img
+              src="Img/message.png"
+              alt="Message Icon"
+              class="message-icon"
+            />
+          </div>
+        </div>
+
+        <!-- Service Section -->
+        <div class="service-card">
+          <h4>Service</h4>
+          <div class="service-info">
+            <img src="Img/service.png" alt="Service Icon" class="icon" />
+            <p>Light Carpentry - Ceiling Repair</p>
+          </div>
+        </div>
+
+        <!-- Location Section -->
+        <div class="service-card">
+          <h4>Location</h4>
+          <div class="service-info">
+            <img src="Img/location.png" alt="Location Icon" class="icon" />
+            <p>
+              Blk 10 Lot 11 Pearl St. Richfield Subd. Brgy. Mambog IV, Bacoor
+              City, Cavite
+            </p>
+          </div>
+        </div>
+
+        <!-- Date and Time Section -->
+        <div class="service-card date-time">
+          <div class="date-time-item">
+            <h4>Date</h4>
+            <h4>Time</h4>
+          </div>
+          <div class="date-time-info">
+            <p>12/12/2024</p>
+            <p>5:00 PM</p>
+          </div>
+        </div>
+
+        <!-- Description Section -->
+        <div class="service-card">
+          <h4>Description</h4>
+          <div class="service-details">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a
+              nisi tellus. Integer ac aliquet tellus. Orci varius natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div id="imageModal" class="image">
+            <h3>Service Request Image</h3>
+            <div class="modal-info">
+              <img
+                src="/users/Images/broken-ceiling.png"
+                alt="Full Image"
+                class="thumbnail-image"
+                id="requestImage"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Modal (to show the full-size image when clicked) -->
+        <div id="imageOverlay" class="image-modal">
+          <div class="image-modal-content">
+            <span class="close-icon" id="closeImageModal">&times;</span>
+            <img id="modalImage" src="" alt="Expanded View" />
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="invoice" onclick="location.href='invoice.html';">
+            Create Invoice
+          </button>
+        </div>
+      </section>
+    </div>
+    <script src="accept-request.js"></script>
+  </body>
+</html>

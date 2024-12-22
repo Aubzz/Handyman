@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookings</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="completed-expanded.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My Bookings</h1>
+        <div class="tab-menu">
+          <a href="bookings.html" class="tab">All</a>
+          <a href="active.html" class="tab">Active</a>
+          <a href="completed.html" class="tab active">Completed</a>
+          <a href="cancelled.html" class="tab">Cancelled</a>
+        </div>
+      </header>
+
+      <div class="booking-card">
+        <div class="booking-header">
+          <div class="customer-info">
+            <img
+              src="/worker/Images/dianne-square.png"
+              alt="Customer Photo"
+              class="customer-photo"
+            />
+            <div class="customer-details">
+              <p class="label">Customer</p>
+              <p class="name">Dianne Taguibao</p>
+              <p class="phone">09123702655</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-details">
+          <p><strong>Date</strong><br />12-December-2024, Thursday</p>
+          <p><strong>Time</strong><br />5:00 PM</p>
+          <span class="status">Completed</span>
+        </div>
+
+        <div class="price-detail">
+          <p><strong>Price Detail</strong></p>
+          <div class="price-item">
+            <p>Hours of Worked</p>
+            <p>1.00</p>
+          </div>
+          <div class="price-item">
+            <p>Rate per hour</p>
+            <p>₱150.00</p>
+          </div>
+          <hr />
+          <div class="total-amount">
+            <p><strong>Total Amount</strong></p>
+            <p>₱150.00</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button
+            class="cancel-btn"
+            id="checkInvoiceBtn"
+            onclick="location='bookings-invoice.html';"
+          >
+            Check Invoice
+          </button>
+          <button class="start-btn">Message</button>
+        </div>
+
+        <div class="expand">
+          <a href="service-demo.html">
+            <img src="/worker/Images/dropdown-icon.png" />
+          </a>
+        </div>
+      </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <a href="home-worker.html" class="nav-item">
+        <img src="/worker/Images/home.png" alt="Home" />
+        <p>Home</p>
+      </a>
+      <a href="bookings.html" class="nav-item active">
+        <img src="/worker/Images/active-booking.png" alt="Bookings" />
+        <p>Bookings</p>
+      </a>
+      <a href="worker-messages.html" class="nav-item">
+        <img src="/worker/Images/message-nav.png" alt="Messages" />
+        <p>Messages</p>
+      </a>
+      <a href="logged-out.html" class="nav-item">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqFjUEO0myZ4ieBl8gW4sPqvFZmg4z1QgC4Etu5hVupE1i2-wv787t2SrHXXOhjG1WIzKY-kJaNG2cQ3atOU818oAZChGNwQ65f0f4YieU2b2WFogQuRZjY1xO0tmdvuqOhuKjuEGj84cdAscimjoC1gu6Ah1F9T1uepddqaq2t0PQRwMqswf2107ebg/s1600/user%20(1).png"
+          alt="Account"
+        />
+        <p>Account</p>
+      </a>
+    </footer>
+  </body>
+</html>

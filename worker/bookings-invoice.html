@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Summary</title>
+    <link rel="stylesheet" href="bookings-invoice.css" />
+  </head>
+
+  <body>
+    <div class="summary-container">
+      <!-- Orange Box with Arrow Button and Service Summary Title -->
+      <header class="header">
+        <h1 class="title">Service Invoice</h1>
+      </header>
+
+      <!-- Summary Content Sections -->
+      <div class="service-card">
+        <p><strong>Services:</strong> Ceiling Repair</p>
+        <p><strong>Category:</strong> Light Carpentry</p>
+        <p><strong>Service Provider:</strong> Michael Cruz</p>
+        <p><strong>Date & Time:</strong> December 12, 2024 | 5:00 PM</p>
+        <p><strong>Address:</strong> Bacoor City, Cavite</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Pricing Details</h3>
+        <p><strong>Hours Worked:</strong> <span id="hours-worked">1</span></p>
+        <p>
+          <strong>Rate per Hour:</strong>
+          <span id="rate-per-hour">₱150.00</span>
+        </p>
+        <p><strong>Subtotal:</strong> <span id="subtotal">₱0.00</span></p>
+        <p>
+          <strong>Other Expenses:</strong>
+          <span id="other-expenses">₱0.00</span>
+        </p>
+        <p><strong>Total:</strong> <span id="total">₱150.00</span></p>
+      </div>
+
+      <div class="section white-bg">
+        <h3>Additional Message</h3>
+        <p id="additional-message"></p>
+      </div>
+
+      <button
+        id="confirmButton"
+        class="confirmBtn"
+        onclick="location='service-expanded.html'"
+      >
+        Close
+      </button>
+    </div>
+
+    <script src="bookings-invoices.js"></script>
+  </body>
+</html>

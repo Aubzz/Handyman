@@ -1,0 +1,167 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Inter, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-page {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+
+.back-button {
+  display: inline-block;
+  font-size: 25px;
+  font-family: bold;
+  color: #000;
+  background: none;
+  border: none;
+  text-decoration: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: auto;
+}
+
+/* Icon */
+.icon-container {
+  margin: 30px 0;
+}
+
+.worker-icon {
+  width: 100px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Congratulations */
+.congratulations {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.congratulations strong {
+  color: #ff6f00;
+}
+
+/* Form */
+.account-form {
+  text-align: left;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #666666;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.checkbox + label {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.link {
+  color: #ff6f00;
+  text-decoration: none;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ffa726, #ffcc80);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 10px 0;
+}
+
+.submit-button:hover {
+  background: linear-gradient(90deg, #ff6f00, #ffaf00);
+}
+
+/* Login Prompt */
+.login-prompt {
+  font-size: 12px;
+  color: #666666;
+}
+
+.login-prompt .link {
+  font-weight: bold;
+}
+
+.password-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.password-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+  background-color: white;
+  font-size: 13px;
+  color: #666666;
+}
+
+.toggle-password {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  position: absolute;
+  left: 60%;
+  top: 107%;
+  transform: translateY(-50%);
+}

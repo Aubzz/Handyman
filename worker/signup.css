@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Inter, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.back-arrow {
+    display: inline-block;
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.icon {
+    width: 100px;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.signup-form {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="tel"],
+.signup-form input[type="password"],
+.signup-form select {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 8px; 
+    height: 35px; 
+    margin: 0 auto 15px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.password-field input {
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #888;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 2px;
+}
+
+.terms span {
+    line-height: 1px;
+}
+
+.terms a {
+    color: #FFA726;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #FFA726, #FFCC80);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 40px;
+}
+
+.signup-button:hover {
+    background: linear-gradient(90deg, #ff6f00, #ffaf00);
+}
+
+.login-text {
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.login-text a {
+    color: #FFA726;
+    text-decoration: none;
+    font-weight: bold;
+}

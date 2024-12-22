@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Details</title>
+    <link rel="stylesheet" href="worker-details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a
+            href="workers.html"
+            class="back-arrow"
+            onclick="window.history.back();"
+            >&#x2190;</a
+          >
+          <h1>Worker Details</h1>
+        </div>
+      </header>
+      <main>
+        <div class="card">
+          <div class="avatar">
+            <img src="/users/Images/jason.png" alt="Mural Painting" />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Bong Aquino</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">09214-022-010</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Manila</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Expertise</p>
+          <p class="value">Mural Painting</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rating</p>
+          <p class="value">⭐4.9 - Experienced</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rate</p>
+          <!-- The rate value will be updated dynamically -->
+          <p class="value" id="bong-rate">₱150/hr</p>
+          <a href="bong-rate.html" class="edit">Edit</a>
+        </div>
+      </main>
+    </div>
+    <script src="bong.js"></script>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+:root {
+  --primary-color: #ff8c00;
+  --background-color: #fff;
+  --text-color: #333;
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.header {
+  position: relative;
+  background-color: var(--primary-color);
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  color: var(--background-color);
+  font-size: 25px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.profile-container {
+  padding: 1rem;
+  text-align: center;
+}
+
+.profile-header {
+  position: relative;
+  margin-top: 90px;
+  height: 100px;
+  top: -180px; /* Adjust profile picture overlap */
+}
+
+.profile-header p {
+  font-weight: 600;
+  color: #414141;
+}
+
+.profile-image-container {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f2f2f2; /* Fallback for missing image */
+  margin: 0 auto 1rem;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.worker-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: -10px; /* Align closer to the image */
+}
+
+.worker-contact, .worker-location {
+  font-size: 0.9rem;
+}
+
+.about-section, .skills-section, .rating-section {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-section p {
+  line-height: 1.6;
+}
+
+.skill-button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  cursor: default;
+  font-weight: bold;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rating-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.stars {
+  font-size: 1.5rem;
+  color: gold;
+}
+
+.service-rate-section {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.service-rate {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: left;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column; 
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  text-align: center; 
+}
+
+.service-rate {
+  font-size: 20px; 
+  font-weight: bold;
+  margin-bottom: 1rem; 
+  color: var(--primary-color); 
+  justify-content: left;
+}
+
+.service-rate h3{
+  font-size: 14px; 
+  font-weight: bold;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center buttons */
+  gap: 1rem; /* Space between buttons */
+}
+
+.message-button, .request-button {
+  width: 176px;
+  padding: 15px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 40px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.message-button {
+  background-color: #333;
+  color: var(--background-color);
+}
+
+.request-button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.message-button:hover, .request-button:hover {
+  transform: scale(1.05); /* Slight enlarge on hover */
+}

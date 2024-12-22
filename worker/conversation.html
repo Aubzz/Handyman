@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="conversation.css" />
+    <!-- Link to the CSS -->
+  </head>
+  <body>
+    <div class="chat-container">
+      <!-- Chat Header -->
+      <div class="chat-header">
+        <button class="back-button" onclick="window.history.back();">←</button>
+        <div class="user-info">
+          <img
+            src="/worker/Images/dianne.png"
+            alt="User Avatar"
+            class="user-avatar"
+          />
+          <div>
+            <div class="user-name">Dianne Taguibao</div>
+            <div class="user-status">Available</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Messages -->
+      <div class="messages">
+        <div class="message-container">
+          <div class="date">Today</div>
+          <div class="message sent">Good Morning!</div>
+          <div class="message sent">Can I know more about the situation?</div>
+          <div class="status">Seen</div>
+        </div>
+      </div>
+
+      <!-- Message Input Section -->
+      <div class="message-input-container">
+        <!-- File Upload -->
+        <input
+          type="file"
+          id="fileUpload"
+          class="file-upload-input"
+          accept="image/*"
+        />
+        <label for="fileUpload" class="file-upload-label">📎</label>
+
+        <!-- Text Input -->
+        <input
+          type="text"
+          id="messageInput"
+          class="message-input"
+          placeholder="Type a message..."
+        />
+
+        <!-- Send Button -->
+        <button id="sendButton" class="send-button">➤</button>
+
+        <!-- Image Preview -->
+        <div id="imagePreview" class="image-preview" style="display: none">
+          <img id="previewImg" src="" alt="Preview" />
+          <button id="removePreview">✖</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="conversation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Details</title>
+    <link rel="stylesheet" href="worker-details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a class="back-arrow" onclick="window.history.back();">&#x2190;</a>
+          <h1>Worker Details</h1>
+        </div>
+      </header>
+      <main>
+        <div class="card">
+          <div class="avatar">
+            <img
+              src="https://img.freepik.com/free-photo/young-woman-with-rubber-gloves-ready-clean_144627-42904.jpg?t=st=1731856378~exp=1731859978~hmac=f666b0486c4be44eaefc1301ff4231cad125f9f9c046c4e682ce120e05098c11&w=900"
+              alt="Worker's Profile Picture"
+              class="profile-image"
+            />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Marian De Guzman</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">09123-123-321</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Parañaque City</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Expertise</p>
+          <p class="value">AC Repairing</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rating</p>
+          <p class="value">⭐4.8 - Experienced</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rate</p>
+          <div class="value">
+            <input type="text" placeholder="₱150/hr" id="marian-rate" />
+          </div>
+          <a href="marian.html" class="edit">Save</a>
+        </div>
+      </main>
+    </div>
+
+    <script src="marian-rate.js"></script>
+  </body>
+</html>

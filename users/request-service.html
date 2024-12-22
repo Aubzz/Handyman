@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Service</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="request-service.css" />
+  </head>
+  <body>
+    <div class="request-service-page">
+      <header>
+        <button class="back-button" onclick="window.history.back();">
+          &larr; Request Service
+        </button>
+      </header>
+      <main>
+        <!-- Location Section -->
+        <section class="location-section">
+          <label for="location">Location</label>
+          <div class="location-input">
+            <span class="icon">📍</span>
+            <input type="text" id="location" placeholder="Enter your address" />
+          </div>
+        </section>
+
+        <!-- Date Section -->
+        <!-- Date Section -->
+        <section class="date-section">
+          <label>Date</label>
+          <div class="calendar-container">
+            <div class="calendar-header">
+              <button id="prev-month" class="calendar-nav">&lt;</button>
+              <span id="month-year" class="month-year">June 2024</span>
+              <button id="next-month" class="calendar-nav">&gt;</button>
+            </div>
+            <div class="calendar-grid">
+              <div class="calendar-day">Sun</div>
+              <div class="calendar-day">Mon</div>
+              <div class="calendar-day">Tue</div>
+              <div class="calendar-day">Wed</div>
+              <div class="calendar-day">Thu</div>
+              <div class="calendar-day">Fri</div>
+              <div class="calendar-day">Sat</div>
+            </div>
+            <div id="calendar-grid" class="calendar-grid-dates"></div>
+          </div>
+        </section>
+
+        <!-- Time Section -->
+        <section class="time-section">
+          <label>Time</label>
+          <div class="time-buttons">
+            <input type="time" id="time-selector" />
+          </div>
+        </section>
+
+        <!-- Description Section -->
+        <section class="description-section">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            placeholder="Describe your request"
+          ></textarea>
+
+          <!-- File Attachment -->
+          <label for="file-attachment">Attach a file (optional)</label>
+          <input
+            type="file"
+            id="file-attachment"
+            accept=".jpg,.png,.pdf,.docx,.xlsx"
+          />
+
+          <div id="file-preview" class="file-preview">
+            <p>No file selected.</p>
+          </div>
+        </section>
+        <!-- Submit Button -->
+        <button class="send-request-button">Send Request</button>
+      </main>
+    </div>
+
+    <div id="requestModal" class="modal">
+      <div class="modal-content">
+        <div class="close-icon">
+          <img
+            src="/worker/Images/close.png"
+            alt="Close"
+            onclick="location='/users/request-service.html';"
+          />
+        </div>
+        <div class="modal-icon">
+          <img src="/worker/Images/accept.png" alt="Success" />
+        </div>
+        <h3>Request Sent</h3>
+        <p>Please wait for the worker’s confirmation.</p>
+        <button id="confirmButton" class="confirm-Button">
+          Go to Bookings
+        </button>
+      </div>
+    </div>
+
+    <script src="request-service.js"></script>
+  </body>
+</html>

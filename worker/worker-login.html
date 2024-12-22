@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Log In | SWBS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="worker-login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Log In</h2>
+      <span class="back-arrow" onclick="window.history.back();">←</span>
+      <img
+        src="https://blogger.googleusercontent.com/img/a/AVvXsEia2HkcQ61XnQa5qUlixUPHmdCN-xsdv4XeCALW9knQ2SlBQ8F5c8x-spPb1GxX7cdtMSYNtcIFxAujOFJ1QVTSh4Qo664LGvLADpGvDg3hLp75zZYldM_ug2k_UPhXYIqe-gAldENiDcv7ffSWEVaKnsYk310-WQ0I_y5-lLt4j0r1qcN86gqT995wyw"
+        alt="Helmet Icon"
+        class="icon"
+      />
+
+      <form class="login-form" action="/worker/home-worker.html" method="post">
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="e.g. 09123456789"
+          required
+        />
+
+        <label for="password">Password</label>
+        <div class="password-field">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+
+        <a href="forgot-password.html" class="forgot-password"
+          >Forgot password?</a
+        >
+
+        <button type="submit" class="login-button">Log In</button>
+      </form>
+      <p class="signup-text">
+        Don't have an account yet?
+        <a href="become-worker.html" class="become-worker">Become a Worker</a>
+      </p>
+    </div>
+
+    <script src="worker-login.js"></script>
+  </body>
+</html>

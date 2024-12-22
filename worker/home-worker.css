@@ -1,0 +1,277 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: linear-gradient(180deg, #ffd580, #ffa500);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.dashboard {
+  padding: 20px;
+}
+
+/* Profile Card */
+.profile-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.profile-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  background-color: #ccc; /* Default empty profile picture color */
+}
+
+.profile-info h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #666;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: #666;
+}
+
+.rating .status-dot {
+  width: 6px;
+  height: 6px;
+  background: #777777;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+/* Service Requests (Draggable Section) */
+.service-requests {
+  position: fixed;
+  bottom: 65px; /* Just above the navigation bar */
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, height 0.3s ease;
+  transform: translateY(0);
+  height: 186px;
+  overflow: hidden;
+}
+
+.service-requests.expanded {
+  height: 85%;
+  overflow-y: auto;
+}
+
+.drag-handle {
+  width: 50px;
+  height: 5px;
+  background: #ccc;
+  border-radius: 5px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.service-requests h3 {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.request-list {
+  list-style: none;
+  padding: 0 20px;
+  display: none; /* Hidden by default */
+}
+
+.service-requests.expanded .request-list {
+  display: block;
+}
+
+.view-button {
+  background: linear-gradient(90deg, #ffa726, #ffcc80);
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 13px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.notification-badge {
+  background: #ff0000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 4px 8px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* Services */
+
+.services {
+  padding: 10px 20px;
+}
+
+.services h2 {
+  font-size: 20px;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.service-card {
+  display: flex;
+  align-items: start;
+  text-decoration: none;
+  background: #fff;
+  margin: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.service-info {
+  flex: 1;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+.service-info h4 {
+  font-size: 11px;
+  margin-bottom: 10px;
+  padding: 10px 0 0;
+}
+
+.service-info h5,
+.service-info h6,
+.service-info p {
+  font-size: 8px;
+}
+
+.service-info p {
+  color: #aaa;
+}
+
+.service-info h4,
+.service-info h5,
+.service-info h6,
+.service-info p {
+  color: #474747;
+  line-height: 1.4;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-row h4,
+.title-row p {
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer .nav-item {
+  color: #aaa; /* Default gray color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
+  filter: grayscale(100%); /* Default gray icons */
+}
+
+.nav-item.active {
+  color: #ff9800; /* Orange color for active item */
+}
+
+.nav-item.active img {
+  filter: none; /* Remove grayscale for active icon */
+}
+
+.nav-item p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.footer .nav-item:hover {
+  color: #ff9800; /* Highlight on hover */
+}
+
+.footer .nav-item img:hover {
+  filter: none;
+}

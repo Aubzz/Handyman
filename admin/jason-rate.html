@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Details</title>
+    <link rel="stylesheet" href="worker-details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a class="back-arrow" onclick="window.history.back();">&#x2190;</a>
+          <h1>Worker Details</h1>
+        </div>
+      </header>
+
+      <main>
+        <div class="card">
+          <div class="avatar">
+            <img
+              src="https://img.freepik.com/free-photo/people-repair-equipment-renovation-concept_343059-3518.jpg?t=st=1731856333~exp=1731859933~hmac=6148f566a6402e884b270cae5c3f6d6c1f4a51fca23dda31c622aec62c28eaad&w=900"
+              alt="Worker's Profile Picture"
+              class="profile-image"
+            />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Jason Maracha</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">0956-005-021</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Bacoor City</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Expertise</p>
+          <p class="value">Solar Panel Installation</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rating</p>
+          <p class="value">⭐ 5.0 - Professional</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rate</p>
+          <div class="value">
+            <input type="text" placeholder="₱150/hr" id="jason-rate" />
+          </div>
+          <a href="jason.html" class="edit">Save</a>
+        </div>
+      </main>
+    </div>
+
+    <script src="jason-rate.js"></script>
+  </body>
+</html>

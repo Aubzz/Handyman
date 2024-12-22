@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Request Form | SWBS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="request-form.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button class="back-button" onclick="history.back()">←</button>
+      <h2>Job Request Form</h2>
+    </header>
+
+    <section class="custom-job-request">
+      <form id="custom-job-form">
+        <!-- Job Title -->
+        <div class="form-group">
+          <label for="job-title">Job Title</label>
+          <input
+            type="text"
+            id="job-title"
+            name="job-title"
+            placeholder="Enter job title"
+            required
+          />
+        </div>
+
+        <!-- Job Description -->
+        <div class="form-group">
+          <label for="job-description">Job Description</label>
+          <textarea
+            id="job-description"
+            name="job-description"
+            placeholder="Provide job details"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Service Category Dropdown -->
+        <div class="form-group">
+          <label for="category">Service Category</label>
+          <select id="category" name="category" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="light-carpentry">Light Carpentry</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="electrical">Electrical</option>
+            <option value="repair-services">Repair Services</option>
+            <option value="painting">Painting</option>
+          </select>
+        </div>
+
+        <!-- Budget -->
+        <div class="form-group">
+          <label for="budget">Price(₱) per hour</label>
+          <input
+            type="number"
+            id="budget"
+            name="budget"
+            placeholder="Enter your budget"
+            min="0"
+            required
+          />
+        </div>
+
+        <!-- Image Upload -->
+        <div class="form-group">
+          <label for="job-image">Upload an Image</label>
+          <input type="file" id="job-image" name="job-image" accept="image/*" />
+          <div class="image-preview" id="image-preview">
+            <p>No image selected</p>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <button type="submit">Submit</button>
+        </footer>
+      </form>
+    </section>
+
+    <script>
+      // Image Preview Functionality
+      document
+        .getElementById("job-image")
+        .addEventListener("change", function (event) {
+          const previewContainer = document.getElementById("image-preview");
+          previewContainer.innerHTML = ""; // Clear previous previews
+
+          const file = event.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const img = document.createElement("img");
+              img.src = e.target.result;
+              img.alt = "Selected Image";
+              previewContainer.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+          } else {
+            previewContainer.innerHTML = "<p>No image selected</p>";
+          }
+        });
+
+      // Handle form submission
+      document
+        .getElementById("custom-job-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Extract values from the form
+          const title = document.getElementById("job-title").value;
+          const description = document.getElementById("job-description").value;
+          const category = document.getElementById("category").value;
+          const budget = document.getElementById("budget").value;
+          const imageFile = document.getElementById("job-image").files[0];
+
+          // Convert the image to Base64
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const imageURL = e.target.result; // Base64 string of the image
+
+            // Retrieve existing jobs from localStorage
+            const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+
+            // Add new job request to the list
+            jobs.push({
+              title,
+              description,
+              category,
+              budget,
+              imageURL,
+            });
+
+            // Save updated job list to localStorage
+            localStorage.setItem("jobs", JSON.stringify(jobs));
+
+            // Redirect to the post job page
+            window.location.href = "post-job.html";
+          };
+
+          if (imageFile) {
+            reader.readAsDataURL(imageFile); // Read the file as a Base64 string
+          } else {
+            // Handle case when no image is uploaded
+            const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+            jobs.push({
+              title,
+              description,
+              category,
+              budget,
+              imageURL: "", // No image
+            });
+
+            localStorage.setItem("jobs", JSON.stringify(jobs));
+            window.location.href = "post-job.html";
+          }
+        });
+    </script>
+  </body>
+</html>

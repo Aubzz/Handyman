@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow: hidden; /* Prevent body scrolling, use profile-page scrolling */
+}
+
+.back-arrow {
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.profile-page {
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: auto; /* Allow vertical scrolling within the profile-page */
+    padding-bottom: 60px; /* To avoid overlap with the fixed footer */
+}
+
+.header {
+    background: #FFA726;
+    padding: 40px 20px 70px;
+    text-align: left;
+    color: white;
+    max-height: 225px;
+    position: relative;
+}
+
+.header h1 {
+    font-size: px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 35px;
+    color: white;
+}
+
+.profile-picture-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+    object-fit: cover;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #FFB347;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+    object-fit: cover;
+}
+
+.header h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    color: black;
+    text-align: center;
+}
+
+.phone-number {
+    background-color: #F3F3F3;
+    padding: 10px 20px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 322px;
+}
+
+.phone-number .label {
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.phone-number .number {
+    color: rgb(68, 68, 68);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.phone-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.section {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.option2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.option .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.option p {
+    flex: 1;
+    font-size: 13px;
+}
+
+.option2 .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.option2 p {
+    flex: 1;
+    font-size: 14px;
+    color:#ff922d;
+    font-weight: bold;
+}
+
+.arrow {
+    font-size: 20px;
+    color: #888;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff922d;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logout-btn .icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border-top: 1px solid #ccc; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+  
+.footer a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+}
+
+.footer .nav-item {
+    color: #aaa; /* Default gray color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+  
+.nav-item img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 5px;
+    filter: grayscale(100%); /* Default gray icons */
+}
+  
+.nav-item.active {
+    color: #FF9800; /* Orange color for active item */
+}
+  
+.nav-item.active img {
+    filter: none; /* Remove grayscale for active icon */
+}
+  
+.nav-item p {
+    margin: 0;
+    font-weight: bold;
+}
+  
+.footer .nav-item:hover {
+    color: #FF9800; /* Highlight on hover */
+}
+
+.footer .nav-item img:hover {
+    filter: none;
+}

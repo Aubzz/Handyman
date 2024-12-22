@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #FFFFFF;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background: #FFA726;
+    color: white;
+    text-align: left;
+    padding: 10px 0;
+  }
+  
+  header h1 {
+    margin: 30px;
+  }
+  
+  .search-bar {
+    position: relative;
+    margin: 10px auto;
+    width: 90%;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 40px;
+    height: 57px;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .search-bar .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+.messages-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.message-thread {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-thread img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.thread-details h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.thread-details p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.time {
+    margin-left: auto;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border-top: 1px solid #ccc; /* Optional: To create a top border */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .footer .nav-item {
+    color: #aaa; /* Default gray color */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .nav-item img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 5px;
+    filter: grayscale(100%); /* Default gray icons */
+  }
+  
+  .nav-item.active {
+    color: #FF9800; /* Orange color for active item */
+  }
+  
+  .nav-item.active img {
+    filter: none; /* Remove grayscale for active icon */
+  }
+  
+  .nav-item p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .footer .nav-item:hover {
+    color: #FF9800; /* Highlight on hover */
+  }
+
+  .footer .nav-item img:hover {
+    filter: none;
+  }
+

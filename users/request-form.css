@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #ff9800;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+  --card-bg: #fff;
+  --border-radius: 10px;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --font-family: Inter, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+header {
+  align-items: center;
+  justify-content: space-between; /* Aligns the back button to the left */
+  padding: 1rem 0;
+}
+
+.back-button {
+  font-size: 25px;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: flex;
+}
+
+header h2 {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin: 0; /* Reset margin for the h2 */
+  text-align: center;
+  flex-grow: 1; /* Take up any extra space and center the text */
+  position: inherit;
+}
+
+.custom-job-request {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  padding-bottom: 90px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+select {
+  appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"%3E%3Cpath fill="%23aaa" d="M2 0L0 2h4zM0 3l2 2 2-2z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+
+.image-preview {
+  margin-top: 1rem;
+  width: 100%;
+  max-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--bg-color);
+  overflow: hidden;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.footer button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.footer button:hover {
+  background-color: #fff;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}

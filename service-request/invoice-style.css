@@ -1,0 +1,165 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.invoice-container {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100vw; /* Full screen width */
+  height: 100vh; /* Full screen height */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.back-arrow {
+  display: inline-block;
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.white-bg {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Fields */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: nowrap; /* Keep elements in one row */
+  overflow-x: auto; /* Allow horizontal scrolling on small screens */
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+  width: 40%; /* Adjust width to fit side-by-side */
+  text-align: left;
+}
+
+input {
+  width: 55%; /* Input takes up the remaining space */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: right;
+}
+
+/* Remove spinner from numeric inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Remove spinner in Firefox */
+}
+
+/* Textarea for Additional Message */
+textarea {
+  resize: none;
+  width: calc(
+    100% - 40px
+  ); /* Reduce width by 40px to account for 20px left and right margins */
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+  text-align: left;
+  margin-left: 20px; /* Adds left margin */
+  margin-right: 20px; /* Adds right margin */
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+/* Subtotal and Total Styles */
+#subtotal,
+#total {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f00;
+  text-align: right;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #f7b731;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #e5a325;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .row {
+    gap: 5px; /* Add a small gap between label and input */
+  }
+
+  label {
+    font-size: 12px; /* Reduce label font size for smaller screens */
+    width: 40%; /* Keep label width consistent */
+  }
+
+  input {
+    width: 55%; /* Input width remains responsive */
+  }
+}
+
+@media (min-width: 768px) {
+  .invoice-container {
+    width: 100vw; /* Full width for larger screens */
+    height: 100vh; /* Full height for larger screens */
+    border-radius: 0; /* Remove border radius for a clean full-screen look */
+  }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nearby Workers</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="map-near-me.css" />
+    <!-- Link to the external CSS file -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <button class="back-button" onclick="history.back()">←</button>
+      <h1>Nearby Workers</h1>
+      <div class="search-bar">
+        <input
+          id="workerSearch"
+          type="text"
+          placeholder="Find workers nearby"
+          onclick="findWorker()"
+        />
+      </div>
+    </header>
+
+    <!-- Map container -->
+    <div id="map" style="height: 400px; width: 100%"></div>
+
+    <footer class="footer">
+      <a href="/users/home.html" class="nav-item active">
+        <img src="/worker/Images/home.png" alt="Home" />
+        <p>Home</p>
+      </a>
+      <a href="/user/bookings.html" class="nav-item">
+        <img src="/worker/Images/active-booking.png" alt="Bookings" />
+        <p>Bookings</p>
+      </a>
+      <a href="/user/worker-messages.html" class="nav-item">
+        <img src="/worker/Images/message-nav.png" alt="Messages" />
+        <p>Messages</p>
+      </a>
+      <a href="/login-signup/logged-out.html" class="nav-item">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqFjUEO0myZ4ieBl8gW4sPqvFZmg4z1QgC4Etu5hVupE1i2-wv787t2SrHXXOhjG1WIzKY-kJaNG2cQ3atOU818oAZChGNwQ65f0f4YieU2b2WFogQuRZjY1xO0tmdvuqOhuKjuEGj84cdAscimjoC1gu6Ah1F9T1uepddqaq2t0PQRwMqswf2107ebg/s1600/user%20(1).png"
+          alt="Account"
+        />
+        <p>Account</p>
+      </a>
+    </footer>
+
+    <script>
+      // Workers data
+      const workers = [
+        {
+          id: 1,
+          name: "Michael Cruz",
+          lat: 14.5995,
+          lng: 120.9842,
+          job: "Plumber",
+          location: "Manila",
+          profileUrl: "/users/service-michael.html",
+        },
+        {
+          id: 2,
+          name: "Sofia Jones",
+          lat: 14.59388,
+          lng: 120.98265,
+          job: "Plumber",
+          location: "Manila",
+          profileUrl: "/worker-profiles/sofia-jones.html",
+        },
+        {
+          id: 3,
+          name: "Jason Chuago",
+          lat: 14.58325,
+          lng: 120.98213,
+          job: "Carpenter",
+          location: "Pasay",
+          profileUrl: "/worker-profiles/jason-chuago.html",
+        },
+        {
+          id: 4,
+          name: "Kianna Gragg",
+          lat: 14.59305,
+          lng: 120.99277,
+          job: "Repair",
+          location: "Manila",
+          profileUrl: "/worker-profiles/kianna-gragg.html",
+        },
+      ];
+
+      // Initialize the map
+      const map = L.map("map").setView([0, 0], 2); // World view by default
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      // Store markers globally
+      let workerMarkers = [];
+
+      // Function to create markers and hide them initially
+      function createWorkerMarkers() {
+        workers.forEach((worker) => {
+          const marker = L.marker([worker.lat, worker.lng], { opacity: 0 }); // Initially invisible
+          marker.bindPopup(`
+            <div>
+              <h3>${worker.name}</h3>
+              <p><a href="${worker.profileUrl}" target="_blank">${worker.job}</a></p>
+              <p>${worker.location}</p>
+            </div>
+          `);
+          workerMarkers.push({ marker, job: worker.job.toLowerCase() });
+        });
+      }
+
+      // Hide all markers
+      function hideAllMarkers() {
+        workerMarkers.forEach(({ marker }) => {
+          map.removeLayer(marker);
+        });
+      }
+
+      // Show markers that match the job
+      function showMatchingMarkers(jobSearch) {
+        workerMarkers.forEach(({ marker, job }) => {
+          if (job.includes(jobSearch.toLowerCase())) {
+            marker.addTo(map); // Add marker to the map
+            marker.setOpacity(1); // Make marker visible
+          } else {
+            map.removeLayer(marker); // Hide marker if not matching
+          }
+        });
+      }
+
+      // Search functionality
+      function findWorker() {
+        const searchInput = document
+          .getElementById("workerSearch")
+          .value.trim();
+        if (searchInput) {
+          hideAllMarkers();
+          showMatchingMarkers(searchInput);
+        } else {
+          alert("Please enter a job to search.");
+        }
+      }
+
+      // Create worker markers on page load
+      createWorkerMarkers();
+
+      // Geolocation for user's location
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const userLat = position.coords.latitude;
+            const userLng = position.coords.longitude;
+            map.setView([userLat, userLng], 14);
+            L.marker([userLat, userLng])
+              .addTo(map)
+              .bindPopup("<b>You are here</b>")
+              .openPopup();
+          },
+          (error) => {
+            console.error("Error getting location:", error.message);
+            alert("Unable to retrieve your location.");
+          }
+        );
+      } else {
+        alert("Geolocation is not supported by your browser.");
+      }
+    </script>
+  </body>
+</html>

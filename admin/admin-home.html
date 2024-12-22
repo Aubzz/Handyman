@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin-home.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Admin</h1>
+    </div>
+    <div class="container">
+      <div class="welcome-card">
+        <img
+          src="/users/Images/default-pfp.png"
+          alt="Upload Profile Photo"
+          id="profile-picture"
+          class="profile-pic"
+        />
+
+        <div class="welcome-text">
+          <h2>Hello, Kianna</h2>
+          <p>Welcome back!</p>
+        </div>
+      </div>
+
+      <a href="pending.html" class="card pending">
+        <div class="icon orange">
+          <img src="/admin/Images/pending.png" />
+          <i class="icon-pending"></i>
+        </div>
+        <p>Pending Applications</p>
+        <h3 id="pending-count">1</h3>
+        <!-- This will show the dynamic count -->
+      </a>
+      <a href="approved.html" class="card approved">
+        <div class="icon green">
+          <img src="/admin/Images/approved.png" />
+          <i class="icon-approved"></i>
+        </div>
+        <p>Approved Applicants</p>
+        <h3 id="approved-count">2</h3>
+        <!-- This will show the dynamic count -->
+      </a>
+      <a href="declined.html" class="card declined">
+        <div class="icon red">
+          <img src="/admin/Images/declined.png" />
+          <i class="icon-declined"></i>
+        </div>
+        <p>Declined Applicants</p>
+        <h3 id="declined-count">3</h3>
+        <!-- This will show the dynamic count -->
+      </a>
+      <div class="card">
+        <p>Date</p>
+        <h3>12/12/2024</h3>
+      </div>
+      <div class="card">
+        <p>Earnings Today</p>
+        <h3>P 567.00</h3>
+      </div>
+      <div class="card total-earnings">
+        <div class="icon green">
+          <img src="/admin/Images/earnings.png" />
+          <i class="icon-money"></i>
+        </div>
+        <p>Total Earnings</p>
+        <h3>P 5,307.00</h3>
+      </div>
+      <a href="workers.html" class="card">
+        <div class="icon blue">
+          <img src="/admin/Images/workers.png" />
+          <i class="icon-workers"></i>
+        </div>
+        <p>No. of Workers</p>
+        <h3>7</h3>
+      </a>
+      <div class="card">
+        <div class="icon purple">
+          <img src="/admin/Images/users.png" />
+          <i class="icon-users"></i>
+        </div>
+        <p>No. of Users</p>
+        <h3>3</h3>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <a href="admin-home.html" class="nav-item active">
+        <img
+          src="https://blogger.googleusercontent.com/img/a/AVvXsEimOlv-VSNFOi-pnlgq0Jtsvf9bDZsF3eIHxbvyONJYAT-kPHUH3dXtjU8yGc6NajD7iNAiX-ekL263ogP5EoznWraZIprkPREk47X_266_Dnx8-4XC1XidHBLY-fgRyeZN8BM37W3Va5U54n39UAgRB1hrgNZ3dcvDImmheM2plajp1WfQ4HvYLk8IGA"
+          alt="Home"
+        />
+        <p>Home</p>
+      </a>
+      <a href="admin-account.html" class="nav-item">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqFjUEO0myZ4ieBl8gW4sPqvFZmg4z1QgC4Etu5hVupE1i2-wv787t2SrHXXOhjG1WIzKY-kJaNG2cQ3atOU818oAZChGNwQ65f0f4YieU2b2WFogQuRZjY1xO0tmdvuqOhuKjuEGj84cdAscimjoC1gu6Ah1F9T1uepddqaq2t0PQRwMqswf2107ebg/s1600/user%20(1).png"
+          alt="Account"
+        />
+        <p>Account</p>
+      </a>
+    </footer>
+
+    <script src="admin-home.js"></script>
+  </body>
+</html>

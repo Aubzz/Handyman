@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="messages.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Messages</h1>
+            <div class="search-bar">
+              <input type="text" placeholder="Search">
+              <img src="https://cdn-icons-png.flaticon.com/512/11741/11741045.png" class="search-icon">
+            </div>
+          </header>
+
+        <!-- Messages List -->
+        <div class="messages-list" id="messagesList" onclick="location.href='conversation.html';">
+            <div class="message-thread" data-id="1">
+                <img src="/users/Images/michael.png" alt="Customer">
+                <div class="thread-details">
+                    <h3>Michael Cruz</h3>
+                    <p>Can I know more about the situation?</p>
+                </div>
+                <span class="time">10m ago</span>
+            </div>
+
+            <!-- Additional threads go here -->
+        </div>
+
+        <footer class="footer">
+          <a href="home.html" class="nav-item">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEimOlv-VSNFOi-pnlgq0Jtsvf9bDZsF3eIHxbvyONJYAT-kPHUH3dXtjU8yGc6NajD7iNAiX-ekL263ogP5EoznWraZIprkPREk47X_266_Dnx8-4XC1XidHBLY-fgRyeZN8BM37W3Va5U54n39UAgRB1hrgNZ3dcvDImmheM2plajp1WfQ4HvYLk8IGA" alt="Home">
+            <p>Home</p>
+          </a>
+          <a href="bookings.html" class="nav-item">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhld8IIFBvzz1Dxj82boSjt1EvfnO7l6x2G0bPnC1cyH4bfgk4OV-GzxtLiB5suaUl9CSmM0-1wUkRwUmxkkXvzBOpmgiH3G-i6k-mFRziVwk8yX_qYcuf6yBZpN8p-Rqgo3hEewcdd4c0VtpeYa1hg7bYAR2PQ5tunAraQcdAZryjaaHJU8msmmTz2Zg" alt="Bookings">
+            <p>Bookings</p>
+          </a>
+          <a href="messages.html" class="nav-item active">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh7XVqIv5prwkdy7ZbYIlN5enr4v8raZNTrU8xdBTZU6OzQBV3SgSQCfEUw1C69HESGPLwG5a4q1c5Ed_Uk0yHYXs5WEU9J_eigAzzfJDmZIRHdgVU9BT593ybmTclAeysJ14EBNVyN8Mc9_7eKxqxt8IezQWCLoCID0FYJ_WbImPH3IeMDd6YYnwNw-w"  alt="Messages">
+            <p>Messages</p>
+          </a>
+          <a href="user-profile.html" class="nav-item">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqFjUEO0myZ4ieBl8gW4sPqvFZmg4z1QgC4Etu5hVupE1i2-wv787t2SrHXXOhjG1WIzKY-kJaNG2cQ3atOU818oAZChGNwQ65f0f4YieU2b2WFogQuRZjY1xO0tmdvuqOhuKjuEGj84cdAscimjoC1gu6Ah1F9T1uepddqaq2t0PQRwMqswf2107ebg/s1600/user%20(1).png" alt="Account">
+            <p>Account</p>
+          </a>
+        </footer>
+      
+
+    <script src="worker-messages.js"></script>
+</body>
+</html>

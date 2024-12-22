@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Details</title>
+    <link rel="stylesheet" href="worker-details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a
+            href="workers.html"
+            class="back-arrow"
+            onclick="window.history.back();"
+            >&#x2190;</a
+          >
+          <h1>Worker Details</h1>
+        </div>
+      </header>
+      <main>
+        <div class="card">
+          <div class="avatar">
+            <img
+              src="https://img.freepik.com/free-photo/pleased-young-male-builder-wearing-uniform-safety-helmet-showing-okey-gesture-his-thumb-up-pink_141793-74561.jpg?t=st=1732943205~exp=1732946805~hmac=cab40e263721820d285b9f22904543a27422632ddf235cdd764b9abfc28a1221&w=740"
+              alt="Worker's Profile Picture"
+              class="profile-image"
+            />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Lito Vargas</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">0956-007-018</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Quezon City</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Expertise</p>
+          <p class="value">Light Carpentry</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rating</p>
+          <p class="value">⭐ 5.0 - Professional</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rate</p>
+          <!-- The rate value will be updated dynamically -->
+          <p class="value" id="lito-rate">₱150/hr</p>
+          <a href="lito-rate.html" class="edit">Edit</a>
+        </div>
+      </main>
+    </div>
+    <script src="lito.js"></script>
+  </body>
+</html>

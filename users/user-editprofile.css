@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.profile-page {
+  width: 100%;
+  max-height: 120vh;
+  overflow-y: auto;
+  padding-bottom: 60px;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+  font-size: 18px;
+  position: relative;
+}
+
+.back-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Header Gradient */
+.header-gradient {
+  background: #ffa726;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.profile-photo-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 5px; /* Adjust to move the icon further into the circle */
+  right: 5px; /* Adjust to move the icon further into the circle */
+  background-color: #ffb347;
+  color: white;
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Optional: add shadow to make it stand out */
+}
+
+#file-upload {
+  display: none; /* Hide the file input element */
+}
+
+/* Form Fields */
+.form {
+  padding: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.phone-field {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.phone-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.check-icon {
+  font-size: 20px;
+  color: #ff9800;
+  position: absolute;
+  right: 10px;
+}
+
+textarea.input-field {
+  height: 100px;
+  resize: none;
+}
+
+/* Save Button */
+.save-button {
+  width: 100%;
+  max-width: 176px;
+  padding: 10px;
+  background-color: #ff9800;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: block; /* Ensure the button is treated as a block element */
+  margin: 10px auto;
+}

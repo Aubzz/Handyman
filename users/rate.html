@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="rate.css">
+</head>
+<body>
+  <div class="rate-page">
+    <!-- Header -->
+    <header class="header">
+      <button class="back-button" onclick="window.history.back();">←</button>
+      <h1>Rate Service</h1>
+    </header>
+
+    <!-- Worker Info -->
+    <div class="worker-info">
+      <img src="/users/Images/michael.png" alt="Worker Avatar" class="worker-avatar">
+      <div class="worker-details">
+        <h2 class="worker-name">Michael Cruz</h2>
+        <p class="worker-tasks">Light Carpentry</p>
+        <div class="worker-rating">
+          <span class="worker-star">★</span><span class="worker-star">★</span><span class="worker-star">★</span><span class="worker-star">★</span><span class="worker-star">★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rating Section -->
+    <div class="rating-section">
+      <div class="rating-category">
+        <h3>Quality of Work</h3>
+        <div class="stars" data-category="quality">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+      <div class="rating-category">
+        <h3>Worker Service</h3>
+        <div class="stars" data-category="service">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="submit-button">Submit</button>
+
+    <!-- Modal Structure -->
+    <div id="appreciationModal" class="modal">
+      <div class="modal-content">
+        <div class="heart-icon">
+          <img src="/users/Images/heart.png" alt="Heart Icon" />
+        </div>
+        <h3>Thank you for rating!</h3>
+        <p>We appreciate you taking the time to rate the service. </p>
+        <button id="closeButton" class="close-button">Close</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+        <a href="home.html" class="nav-item">
+          <img src="https://blogger.googleusercontent.com/img/a/AVvXsEimOlv-VSNFOi-pnlgq0Jtsvf9bDZsF3eIHxbvyONJYAT-kPHUH3dXtjU8yGc6NajD7iNAiX-ekL263ogP5EoznWraZIprkPREk47X_266_Dnx8-4XC1XidHBLY-fgRyeZN8BM37W3Va5U54n39UAgRB1hrgNZ3dcvDImmheM2plajp1WfQ4HvYLk8IGA" alt="Home">
+          <p>Home</p>
+        </a>
+        <a href="bookings.html" class="nav-item active">
+          <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhld8IIFBvzz1Dxj82boSjt1EvfnO7l6x2G0bPnC1cyH4bfgk4OV-GzxtLiB5suaUl9CSmM0-1wUkRwUmxkkXvzBOpmgiH3G-i6k-mFRziVwk8yX_qYcuf6yBZpN8p-Rqgo3hEewcdd4c0VtpeYa1hg7bYAR2PQ5tunAraQcdAZryjaaHJU8msmmTz2Zg" alt="Bookings">
+          <p>Bookings</p>
+        </a>
+        <a href="messages.html" class="nav-item">
+          <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh7XVqIv5prwkdy7ZbYIlN5enr4v8raZNTrU8xdBTZU6OzQBV3SgSQCfEUw1C69HESGPLwG5a4q1c5Ed_Uk0yHYXs5WEU9J_eigAzzfJDmZIRHdgVU9BT593ybmTclAeysJ14EBNVyN8Mc9_7eKxqxt8IezQWCLoCID0FYJ_WbImPH3IeMDd6YYnwNw-w" alt="Messages">
+          <p>Messages</p>
+        </a>
+        <a href="user-profile.html" class="nav-item">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqFjUEO0myZ4ieBl8gW4sPqvFZmg4z1QgC4Etu5hVupE1i2-wv787t2SrHXXOhjG1WIzKY-kJaNG2cQ3atOU818oAZChGNwQ65f0f4YieU2b2WFogQuRZjY1xO0tmdvuqOhuKjuEGj84cdAscimjoC1gu6Ah1F9T1uepddqaq2t0PQRwMqswf2107ebg/s1600/user%20(1).png" alt="Account">
+          <p>Account</p>
+        </button>
+      </footer>
+  </div>
+  <script src="rate.js"></script>
+</body>
+</html>

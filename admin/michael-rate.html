@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Details</title>
+    <link rel="stylesheet" href="worker-details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <header>
+        <div class="status-bar">
+          <div class="status-icons"></div>
+        </div>
+        <div class="header-content">
+          <a
+            href="javascript:void(0);"
+            class="back-arrow"
+            onclick="window.history.back();"
+            >&#x2190;</a
+          >
+          <h1>Worker Details</h1>
+        </div>
+      </header>
+
+      <!-- Main Section -->
+      <main>
+        <div class="card">
+          <div class="avatar">
+            <img
+              src="/users/Images/michael2.png"
+              alt="Worker's Profile Picture"
+              class="profile-image"
+            />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Michael Cruz</p>
+          </div>
+        </div>
+
+        <!-- Information Blocks -->
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">09453-254-366</p>
+        </div>
+
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Manila</p>
+        </div>
+
+        <div class="info-block">
+          <p class="label">Expertise</p>
+          <p class="value">Plumbing Repairing</p>
+        </div>
+
+        <div class="info-block">
+          <p class="label">Rating</p>
+          <p class="value">⭐ 5.0 - Professional</p>
+        </div>
+
+        <div class="info-block">
+          <p class="label">Rate</p>
+          <div class="value">
+            <input type="text" placeholder="₱150/hr" id="rate" />
+          </div>
+          <a href="michael.html" class="edit">Save</a>
+        </div>
+      </main>
+    </div>
+
+    <script src="michael-rate.js"></script>
+  </body>
+</html>

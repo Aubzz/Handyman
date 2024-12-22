@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffa726;
+  color: white;
+  position: relative;
+  padding: 10px 0;
+}
+
+header h1 {
+  margin: 30px;
+}
+
+header a {
+  position: absolute;
+  top: 35%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+
+header a img {
+  width: 35px;
+  height: 35px;
+}
+
+.search-bar {
+  position: relative;
+  margin: 10px auto;
+  width: 90%;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 40px;
+  height: 57px;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.categories a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+.category {
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+  transition: transform 0.2s, color 0.3s ease;
+}
+
+.category img {
+  width: 60px;
+  height: 60px;
+  background-color: #ffe0b2;
+  border-radius: 50%;
+  padding: 5px;
+  margin-bottom: 2px;
+  object-fit: cover;
+}
+
+.category p {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.category:hover {
+  transform: scale(1.1);
+  color: #ff9800;
+}
+
+hr {
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid rgba(145, 145, 145, 0.32);
+}
+
+/* Services */
+.services {
+  padding: 10px 20px;
+  padding-bottom: 100px;
+}
+
+.services h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 18px;
+  margin-left: 20px;
+  font-style: bold;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  background-color: #fff;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.service-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.service-info h4 {
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #474747;
+  font-style: bold;
+}
+
+.service-info h5 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #ff9800;
+  font-style: bold;
+}
+
+.service-info p {
+  font-size: 10px;
+  margin-bottom: 5px;
+  color: #474747;
+  font-style: bold;
+}
+
+.service-info h3,
+h4,
+h5,
+p {
+  margin: 5px;
+  line-height: 1.4;
+}
+
+.service-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #fff;
+  border-top: 1px solid #ccc; /* Optional: To create a top border */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer .nav-item {
+  color: #aaa; /* Default gray color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-item img {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 5px;
+  filter: grayscale(100%); /* Default gray icons */
+}
+
+.nav-item.active {
+  color: #ff9800; /* Orange color for active item */
+}
+
+.nav-item.active img {
+  filter: none; /* Remove grayscale for active icon */
+}
+
+.nav-item p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.footer .nav-item:hover {
+  color: #ff9800; /* Highlight on hover */
+}
+
+.footer .nav-item img:hover {
+  filter: none;
+}
+
+.custom-job-request {
+  margin: 15px;
+  padding: 20px;
+  background-color: #ff9800;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-job-request h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.custom-job-request p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+.custom-job-request a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #ff9800;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+}
+
+.custom-job-request a:hover {
+  background-color: #ff9800;
+  border-color: #fff;
+  color: #fff;
+  border: 2px solid white;
+}

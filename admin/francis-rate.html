@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Details</title>
+    <link rel="stylesheet" href="worker-details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a class="back-arrow" onclick="window.history.back();">&#x2190;</a>
+          <h1>Worker Details</h1>
+        </div>
+      </header>
+
+      <main>
+        <div class="card">
+          <div class="avatar">
+            <img
+              src="https://img.freepik.com/free-photo/renovation-occupation-concept-young-handyman-wearing-protective-goggles-shirt-kit-full-tools-holding-blueprint-looking-with-excited-expression-going-have-rest-after-work_273609-7915.jpg?t=st=1731856273~exp=1731859873~hmac=7c0e3602c51186a0b3efef11d8954f7cd8f8d310ed59735af16c2ca4b70f96f1&w=900"
+              alt="Worker's Profile Picture"
+              class="profile-image"
+            />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Francis Dayuno</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">09321-012-010</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Quezon City</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Expertise</p>
+          <p class="value">Plumbing</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rating</p>
+          <p class="value">⭐4.9 - Professional</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rate</p>
+          <div class="value">
+            <input type="text" placeholder="₱150/hr" id="francis-rate" />
+          </div>
+          <a href="francis.html" class="edit">Save</a>
+        </div>
+      </main>
+    </div>
+
+    <script src="francis-rate.js"></script>
+  </body>
+</html>
