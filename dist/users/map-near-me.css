@@ -9,7 +9,7 @@ body {
   font-family: Inter, sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 90vh;
+  min-height: 90.5vh; /* Adjusted to ensure full height */
   margin: 0;
 }
 
@@ -19,34 +19,35 @@ header {
   color: white;
   position: relative;
   padding: 10px 0;
+  display: flex;
+  align-items: center; /* Ensures vertical centering */
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
 header h1 {
-  margin: 30px;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-header a {
-  position: absolute;
-  top: 45%;
-  right: 30px;
-  transform: translateY(-50%);
-}
-
-header a img {
-  width: 35px;
-  height: 35px;
+header .back-button {
+  font-size: 25px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .search-bar {
   position: relative;
-  margin: 10px auto;
-  width: 90%;
+  width: 80%;
 }
 
 .search-bar input {
   width: 100%;
   padding: 10px 40px;
-  height: 57px;
+  height: 40px;
   border: none;
   border-radius: 20px;
   font-size: 16px;
@@ -57,91 +58,6 @@ header a img {
 /* Map container */
 #map {
   flex: 1;
-  height: 100%; /* Ensures the map takes up all available height */
-  width: 100%;
-  max-height: 400px; /* Limit height for better mobile display */
-}
-
-/* Footer */
-.footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 0;
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 60px; /* Fixed height for footer */
-}
-
-.footer a {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-size: 13px;
-}
-
-.footer .nav-item {
-  color: #aaa; /* Default gray color */
-  transition: color 0.3s ease; /* Smooth color transition */
-}
-
-.nav-item img {
-  width: 28px;
-  height: 28px;
-  margin-bottom: 5px;
-  filter: grayscale(100%); /* Default gray icons */
-}
-
-.nav-item.active {
-  color: #ff9800; /* Orange color for active item */
-}
-
-.nav-item.active img {
-  filter: none; /* Remove grayscale for active icon */
-}
-
-.nav-item p {
-  margin: 0;
-  font-weight: bold;
-}
-
-.footer .nav-item:hover {
-  color: #ff9800; /* Highlight on hover */
-}
-
-.footer .nav-item img:hover {
-  filter: none;
-}
-
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-  #map {
-    height: 300px; /* Adjust map height for smaller screens */
-  }
-}
-
-.back-button {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: none;
-  border: none;
-  color: var(--background-color);
-  font-size: 25px;
-  cursor: pointer;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-/* Map container */
-#map {
-  flex: 1; /* Allow the map to grow and fill available space */
   height: calc(100vh - 160px); /* Full height minus header and footer height */
   width: 100%;
 }
@@ -157,9 +73,10 @@ header a img {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 60px; /* Fixed height for footer */
+  height: 60px;
 }
 
+/* Footer Navigation styles */
 .footer a {
   text-decoration: none;
   color: inherit;
@@ -171,23 +88,23 @@ header a img {
 }
 
 .footer .nav-item {
-  color: #aaa; /* Default gray color */
-  transition: color 0.3s ease; /* Smooth color transition */
+  color: #aaa;
+  transition: color 0.3s ease;
 }
 
 .nav-item img {
   width: 28px;
   height: 28px;
   margin-bottom: 5px;
-  filter: grayscale(100%); /* Default gray icons */
+  filter: grayscale(100%);
 }
 
 .nav-item.active {
-  color: #ff9800; /* Orange color for active item */
+  color: #ff9800;
 }
 
 .nav-item.active img {
-  filter: none; /* Remove grayscale for active icon */
+  filter: none;
 }
 
 .nav-item p {
@@ -196,9 +113,22 @@ header a img {
 }
 
 .footer .nav-item:hover {
-  color: #ff9800; /* Highlight on hover */
+  color: #ff9800;
 }
 
 .footer .nav-item img:hover {
   filter: none;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  #map {
+    height: 300px;
+  }
+  header .back-button {
+    font-size: 20px;
+  }
+  header .search-bar input {
+    padding: 10px 30px;
+  }
 }
