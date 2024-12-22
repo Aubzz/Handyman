@@ -25,13 +25,11 @@
           id="workerSearch"
           type="text"
           placeholder="Find workers nearby"
-          onclick="findWorker()"
         />
       </div>
     </header>
 
-    <!-- Map container -->
-    <div id="map" style="height: 400px; width: 100%"></div>
+    <div id="map"></div>
 
     <footer class="footer">
       <a href="/users/home.html" class="nav-item active">
@@ -97,7 +95,7 @@
       ];
 
       // Initialize the map
-      const map = L.map("map").setView([0, 0], 2); // World view by default
+      const map = L.map("map").setView([0, 0], 2);
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -109,7 +107,7 @@
       // Function to create markers and hide them initially
       function createWorkerMarkers() {
         workers.forEach((worker) => {
-          const marker = L.marker([worker.lat, worker.lng], { opacity: 0 }); // Initially invisible
+          const marker = L.marker([worker.lat, worker.lng], { opacity: 0 });
           marker.bindPopup(`
             <div>
               <h3>${worker.name}</h3>
@@ -132,13 +130,22 @@
       function showMatchingMarkers(jobSearch) {
         workerMarkers.forEach(({ marker, job }) => {
           if (job.includes(jobSearch.toLowerCase())) {
-            marker.addTo(map); // Add marker to the map
-            marker.setOpacity(1); // Make marker visible
+            marker.addTo(map);
+            marker.setOpacity(1);
           } else {
-            map.removeLayer(marker); // Hide marker if not matching
+            map.removeLayer(marker);
           }
         });
       }
+
+      // Event listener for search input
+      document
+        .getElementById("workerSearch")
+        .addEventListener("keydown", function (event) {
+          if (event.key === "Enter") {
+            findWorker();
+          }
+        });
 
       // Search functionality
       function findWorker() {
