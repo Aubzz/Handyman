@@ -388,3 +388,25 @@ header h1 {
 .footer .nav-item img:hover {
   filter: none;
 }
+.transaction {
+  font-weight: 700;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.empty-state img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.empty-state h3 {
+  font-size: 18px;
+  color: #717171;
+  font-weight: bold;
+}

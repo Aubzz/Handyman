@@ -9,12 +9,9 @@
   <body>
     <div class="main-container">
       <header class="header">
-        <a
-          href="/service-request/carpentry-installation.html"
-          class="back-arrow"
-          >&#8592;</a
-        >
-        <h1 class="title">Service Request</h1>
+        <button class="back-arrow" onclick="window.history.back();">
+          &larr; Service Request
+        </button>
       </header>
       <section class="content-container">
         <div class="service-card">
@@ -91,7 +88,7 @@
             <h3>Service Request Image</h3>
             <div class="modal-info">
               <img
-                src="/users/Images/broken-ceiling.png"
+                src="/dist/users/Images/broken-ceiling.png"
                 alt="Full Image"
                 class="thumbnail-image"
                 id="requestImage"

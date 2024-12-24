@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Make the profile options clickable
   document.getElementById("my-reviews").addEventListener("click", function () {
-    window.location.href = "/login-signup/my-reviews.html";
+    window.location.href = "/dist/login-signup/my-reviews.html";
   });
 
   document
@@ -33,13 +33,19 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("customer-support")
     .addEventListener("click", function () {
-      window.location.href = "/login-signup/customer-support.html";
+      window.location.href = "/dist/login-signup/customer-support.html";
     });
 
   document
     .getElementById("terms-of-use")
     .addEventListener("click", function () {
-      window.location.href = "/login-signup/terms-of-use.html";
+      window.location.href = "/dist/login-signup/terms-of-use.html";
+    });
+
+  document
+    .getElementById("become-a-worker")
+    .addEventListener("click", function () {
+      window.location.href = "/dist/worker/become-worker.html";
     });
 
   // Logout functionality

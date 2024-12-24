@@ -41,7 +41,7 @@ body {
 }
 
 .profile-container {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   text-align: center;
 }
 
@@ -73,6 +73,10 @@ body {
   object-fit: cover;
 }
 
+.img-jason {
+  width: 210px;
+  height: 160px;
+}
 .worker-name {
   font-size: 1.5rem;
   font-weight: bold;
@@ -93,9 +97,21 @@ body {
   border-top: 1px solid #ddd;
 }
 
-h2 {
+.review-section {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+
+.about-section h2,
+.skills-section h2,
+.rating-section h2,
+.review-section h2 {
   font-size: 1.2rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.review-section h2 {
   margin-bottom: 0.5rem;
 }
 
@@ -133,7 +149,8 @@ h2 {
 
 .service-rate-section {
   text-align: left;
-  margin-top: 10px;
+  border-top: 1px solid #ddd; /* Same border style as other sections */
+  padding-top: 5px;
 }
 
 .service-rate {
@@ -143,12 +160,54 @@ h2 {
   text-align: left;
 }
 
+/* Review Image Styling */
+.reviewer-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px; /* Space between image and name */
+}
+
+/* Adjust Review Header Layout */
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Add space between name and comment */
+}
+
+/* Styling for the review card */
+.service-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Styling for the review comment section */
+.service-info {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Add padding and spacing between each review block */
+#review-list {
+  margin-top: 1rem;
+}
+
+/* Optional: Add a slight shadow for better separation */
+.service-card {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .footer {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  background-color: var(--background-color);
-  border-top: 1px solid #ddd;
+  padding: 0.5rem 1rem;
 }
 
 .footer-container {

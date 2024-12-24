@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="completed.css" />
+    <link rel="stylesheet" href="cancelled.css" />
   </head>
   <body>
     <div class="container">
@@ -17,8 +17,8 @@
         <div class="tab-menu">
           <a href="bookings.html" class="tab">All</a>
           <a href="no-active.html" class="tab">Active</a>
-          <a href="completed.html" class="tab active">Completed</a>
-          <a href="cancelled.html" class="tab">Cancelled</a>
+          <a href="no-servicedemo.html" class="tab">Completed</a>
+          <a href="cancelled.html" class="tab active">Cancelled</a>
         </div>
       </header>
 
@@ -26,8 +26,7 @@
         <div class="customer-info">
           <img
             src="/dist/worker/Images/dianne-square.png"
-            alt="Customer Photo"
-            class="customer-photo"
+            alt="Customer Image"
           />
           <div class="customer-details">
             <p class="label">Customer</p>
@@ -38,15 +37,26 @@
         <div class="booking-details">
           <p><strong>Date</strong><br />12-December-2024, Thursday</p>
           <p><strong>Time</strong><br />5:00 PM</p>
-          <span class="status active">Completed</span>
-        </div>
-        <div class="expand">
-          <a href="/dist/worker/service-expanded.html">
-            <img src="/dist/worker/Images/dropdown-icon.png" />
-          </a>
+          <span class="status active">Cancelled</span>
         </div>
       </div>
 
+      <div class="booking-card">
+        <div class="customer-info">
+          <img src="/dist/worker/Images/alexandra.png" alt="Customer Image" />
+          <div class="customer-details">
+            <p class="label">Customer</p>
+            <p class="name">Andrea Carpio</p>
+            <p class="phone">095923779199</p>
+          </div>
+        </div>
+        <div class="booking-details">
+          <p><strong>Date</strong><br />29-October-2024, Sunday</p>
+          <p><strong>Time</strong><br />10:00 AM</p>
+          <span class="status active">Cancelled</span>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer Section -->
     <footer class="footer">

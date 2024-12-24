@@ -27,11 +27,17 @@ body {
 }
 
 .back-button {
-  font-size: 20px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
   background: none;
   border: none;
+  color: var(--background-color);
+  font-size: 25px;
   cursor: pointer;
-  text-decoration: none;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  font-weight: bold;
 }
 
 .user-info {

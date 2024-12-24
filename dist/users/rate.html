@@ -39,6 +39,8 @@
           <span class="star">★</span>
         </div>
       </div>
+
+      
       <div class="rating-category">
         <h3>Worker Service</h3>
         <div class="stars" data-category="service">
@@ -51,8 +53,13 @@
       </div>
     </div>
 
+    <div class="comment-section">
+      <h3>Leave a Feedback</h3>
+      <textarea id="comment" placeholder="Write your review here..." rows="4"></textarea>
+    </div>
+
     <!-- Submit Button -->
-    <button class="submit-button">Submit</button>
+    <button class="submit-button" onclick="submitReview()">Submit</button>
 
     <!-- Modal Structure -->
     <div id="appreciationModal" class="modal">

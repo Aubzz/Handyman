@@ -14,7 +14,89 @@ body {
 .rate-page {
   display: flex;
   flex-direction: column;
-  height: 110vh;
+  height: 130vh;
+}
+
+/* General Layout Styling */
+.comment-section {
+  padding: 1rem;
+}
+
+.comment-section h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Textarea Styling */
+textarea#comment {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  font-size: 1rem;
+  resize: vertical;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+textarea#comment:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.4);
+}
+
+/* General styling for the name container */
+.user-name-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+/* Label styling */
+.user-name-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Input styling for the name field */
+.user-name-input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #555;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  cursor: not-allowed;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Anonymous checkbox container */
+.anonymous-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Checkbox styling */
+.anonymous-container input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Label for anonymous toggle */
+.anonymous-container label {
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Hover effect for anonymous toggle */
+.anonymous-container label:hover {
+  text-decoration: underline;
 }
 
 /* Header */
@@ -88,7 +170,7 @@ body {
 }
 
 .rating-category {
-  margin-bottom: 50px;
+  margin-bottom: 15px;
 }
 
 .rating-category h3 {

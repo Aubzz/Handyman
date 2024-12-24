@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .getElementById("confirmButton")
     .addEventListener("click", function () {
-      window.location.href = "cancelled.html";
+      window.location.href = "with-cancelled.html";
     });
 
   // Open the confirmation modal
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   confirmActionButton.addEventListener("click", () => {
     closeModal(confirmationModal);
-    window.location.href = "/worker/start-job.html"; // Replace with the actual file path or URL
+    window.location.href = "/dist/worker/start-job.html"; // Replace with the actual file path or URL
   });
 
   cancelConfirmButton.addEventListener("click", () => {

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Worker Profile</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="service-details.html">
+  <link rel="stylesheet" href="service-details.css">
 </head>
 <body>
   <header class="header">
@@ -45,20 +45,33 @@
         </div>
       </div>
     </section>
+    <section class="review-section">
+      <h2>Reviews</h2>
+      <div class="service-card">
+        <div class="review-header">
+          <img src="/dist/users/Images/default-pfp.png" alt="Reviewer Image" class="reviewer-image">
+          <strong>Jea Dugang</strong>
+        </div>
+        <div class="service-info">
+          <p><strong>Review:</strong>Highly skilled and professional—got the job done quickly and efficiently</p>
+          <p><strong>Quality Rating:</strong> 5.0⭐</p>
+          <p><strong>Service Rating:</strong> 5.0⭐</p>
+      </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-container">
-      <div class="service-rate">
-        <h3>Service Rate:</h3>
-        <p>₱1,000/hr</p>
-      </div>
-      <div class="button-container">
-        <a href="messages.html" class="message-button">Message</a>
-        <a href="request-service.html" class="request-button">Request Service</a>
-      </div>
+    <section class="service-rate-section">
+      <h3>Service Rate:</h3>
+      <p class="service-rate">₱1000/hr</p>
+    </section>
+
+    <div class="button-container">
+      <a href="messages.html" class="message-button">Message</a>
+      <a href="request-service.html" class="request-button">Request Service</a>
     </div>
-  </footer>  
+  </footer>
 
 </body>
 </html>

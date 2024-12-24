@@ -16,7 +16,7 @@
   <main class="profile-container">
     <div class="profile-header">
       <div class="profile-image-container">
-        <img src="/users/Images/michael2.png" alt="Worker's Profile Picture" class="profile-image">     
+        <img src="/dist/users/Images/michael2.png" alt="Worker's Profile Picture" class="profile-image">     
      </div>
       <h1 class="worker-name">Michael Cruz</h1>
       <p class="worker-contact">09453-254-366</p>
@@ -45,7 +45,14 @@
         </div>
       </div>
     </section>
+
+    <section class="review-section">
+        <h2>Reviews</h2>
+        <div id="review-list"></div>
+    </section>
   </main>
+  
+
 
   <footer class="footer">
     <section class="service-rate-section">
@@ -58,5 +65,46 @@
       <a href="request-service.html" class="request-button">Request Service</a>
     </div>
   </footer>
+
+  <script>
+    function loadReviews() {
+      const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+      const reviewList = document.getElementById('review-list');
+
+
+
+      // Retrieve the current user's details
+      const userDetails = JSON.parse(localStorage.getItem("userDetails"));
+
+      reviews.forEach((review) => {
+        if (review.workerId === 'michael-cruz') { // Show reviews only for this worker
+          const reviewCard = document.createElement('div');
+          reviewCard.classList.add('service-card');
+          
+          // Get the reviewer's name and image from the stored userDetails
+          const reviewerName = userDetails ? `${userDetails.firstName} ${userDetails.lastName}` : 'Anonymous';
+          const reviewerImage = userDetails ? userDetails.profilePicture : '/dist/users/Images/default-user.png'; // Default image if none exists
+
+          reviewCard.innerHTML = `
+            <div class="review-header">
+              <img src="${reviewerImage}" alt="Reviewer Image" class="reviewer-image">
+              <strong>${reviewerName}</strong>
+            </div>
+            <div class="service-info">
+              <p><strong>Review:</strong> ${review.comment || 'No comment provided'}</p>
+              <p><strong>Quality Rating:</strong> ${review.qualityRating} ⭐</p>
+              <p><strong>Service Rating:</strong> ${review.serviceRating} ⭐</p>
+            </div>
+          `;
+          reviewList.appendChild(reviewCard);
+        }
+      });
+    }
+
+    // localStorage.removeItem('reviews');
+
+    document.addEventListener('DOMContentLoaded', loadReviews);
+
+  </script>
 </body>
 </html>
