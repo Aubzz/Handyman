@@ -12,6 +12,10 @@ body {
   padding: 0;
 }
 
+.location-icon {
+  border-radius: 100%;
+}
+
 header {
   background-color: #ffa726;
   color: white;
