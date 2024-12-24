@@ -116,6 +116,12 @@ body {
   height: 20px;
 }
 
+.worker,
+.log-out {
+  width: 35px;
+  height: 35px;
+}
+
 .section {
   padding: 0 20px;
   margin-bottom: 20px;
@@ -145,8 +151,8 @@ body {
 }
 
 .option .icon {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 

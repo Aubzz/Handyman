@@ -76,6 +76,11 @@ body {
   object-fit: cover;
 }
 
+.worker,
+.log-out {
+  width: 30px;
+  height: 30px;
+}
 .header h2 {
   font-size: 20px;
   margin-top: 10px;
