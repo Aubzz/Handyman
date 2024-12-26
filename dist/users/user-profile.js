@@ -19,25 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Make the profile options clickable
   document.getElementById("my-reviews").addEventListener("click", function () {
-    window.location.href = "/dist/login-signup/my-reviews.html";
+    window.location.href = "my-reviews.html";
   });
 
   document
     .getElementById("change-password")
     .addEventListener("click", function () {
-      window.location.href = "/dist/login-signup/forgot-password.html";
+      window.location.href = "forgot-password.html";
     });
 
   document
     .getElementById("customer-support")
     .addEventListener("click", function () {
-      window.location.href = "/dist/login-signup/customer-support.html";
+      window.location.href = "customer-support.html";
     });
 
   document
     .getElementById("terms-of-use")
     .addEventListener("click", function () {
-      window.location.href = "/dist/login-signup/terms-of-use.html";
+      window.location.href = "terms-of-use.html";
     });
 
   document
