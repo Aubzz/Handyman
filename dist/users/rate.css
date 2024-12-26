@@ -14,12 +14,18 @@ body {
 .rate-page {
   display: flex;
   flex-direction: column;
-  height: 130vh;
+  height: 10vh;
 }
 
 /* General Layout Styling */
 .comment-section {
-  padding: 1rem;
+  padding: 0rem 1rem;
+}
+
+.photo-upload-section {
+  padding: 0rem 1rem;
+  margin-left: 5px;
+  margin-top: 1rem;
 }
 
 .comment-section h3 {
@@ -324,4 +330,49 @@ textarea#comment:focus {
 
 .footer .nav-item img:hover {
   filter: none;
+}
+
+.photo-upload-section {
+  padding: 10px;
+}
+
+#photo-upload {
+  margin-top: 10px;
+}
+
+#photo-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.photo-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+/* Submit Button */
+.submit-button {
+  margin: 30px auto;
+  padding: 10px;
+  background-color: #ff9800;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  width: 400px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button:hover {
+  background-color: #f8aa37;
 }

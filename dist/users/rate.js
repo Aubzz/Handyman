@@ -35,7 +35,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Function to load the reviews on the profile page
+// Photo upload and preview
+document.getElementById("photo-upload").addEventListener("change", (event) => {
+  const photoPreviewContainer = document.getElementById(
+    "photo-preview-container"
+  );
+  photoPreviewContainer.innerHTML = ""; // Clear previous previews
+
+  const files = event.target.files;
+  Array.from(files).forEach((file) => {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const img = document.createElement("img");
+      img.src = e.target.result;
+      img.alt = "Uploaded Photo";
+      img.className = "photo-preview";
+      photoPreviewContainer.appendChild(img);
+    };
+    reader.readAsDataURL(file);
+  });
+});
+
 // Function to load the reviews on the profile page
 function loadReviews() {
   const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
@@ -78,6 +98,7 @@ function loadReviews() {
 document.addEventListener("DOMContentLoaded", loadReviews);
 
 // Function to handle review submission
+// Function to handle review submission
 function submitReview() {
   const qualityRating = document.querySelectorAll(
     '.stars[data-category="quality"] .star.selected'
@@ -89,6 +110,11 @@ function submitReview() {
 
   // Retrieve the user's details
   const userDetails = JSON.parse(localStorage.getItem("userDetails"));
+
+  const photoElements = document.querySelectorAll(
+    "#photo-preview-container img"
+  );
+  const photoURLs = Array.from(photoElements).map((img) => img.src);
 
   const reviewerName = userDetails
     ? `${userDetails.firstName} ${userDetails.lastName}`
@@ -111,6 +137,9 @@ function submitReview() {
     return; // Prevent further submission
   }
 
+  // Get current date and time
+  const dateTime = new Date().toLocaleString();
+
   // Create a new review object
   const review = {
     workerId,
@@ -120,6 +149,8 @@ function submitReview() {
     comment,
     reviewerName,
     reviewerImage,
+    photoURLs,
+    dateTime, // Add the date and time
   };
 
   // Save the new review

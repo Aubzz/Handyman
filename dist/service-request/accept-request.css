@@ -23,6 +23,11 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+#modalImage {
+  width: 500px;
+  height: 500px;
+}
+
 .header {
   background: linear-gradient(90deg, #ffae00, #ffcc00);
   color: #fff;

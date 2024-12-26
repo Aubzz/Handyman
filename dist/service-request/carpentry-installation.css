@@ -27,7 +27,6 @@ body {
   margin-top: 1rem;
   font-weight: bold;
 }
-
 .main-container {
   background: #fff;
   width: 100%;
@@ -234,6 +233,10 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+#modalImage {
+  width: 500px;
+  height: 500px;
+}
 .modal-icon img {
   width: 100px;
   height: 100px;

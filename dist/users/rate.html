@@ -1,97 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rate Service</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="rate.css">
-</head>
-<body>
-  <div class="rate-page">
-    <!-- Header -->
-    <header class="header">
-      <button class="back-button" onclick="window.history.back();">←</button>
-      <h1>Rate Service</h1>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rate Service</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="rate.css" />
+  </head>
+  <body>
+    <div class="rate-page">
+      <header class="header">
+        <button class="back-button" onclick="window.history.back();">←</button>
+        <h1>Rate Service</h1>
+      </header>
 
-    <!-- Worker Info -->
-    <div class="worker-info">
-      <img src="https://img.freepik.com/free-photo/young-cleaning-guy-wearing-uniform-cap-holding-rag-with-cleaning-agent-isolated-white-wall_141793-122151.jpg?t=st=1735042377~exp=1735045977~hmac=edb368d59e72430ada894d5dcde4511f649e50af88f801215316ddaa8cea7101&w=740" alt="Worker Avatar" class="worker-avatar">
-      <div class="worker-details">
-        <h2 class="worker-name">Michael Cruz</h2>
-        <p class="worker-tasks">Light Carpentry</p>
-        <div class="worker-rating">
-          <span class="worker-star">★</span><span class="worker-star">★</span><span class="worker-star">★</span><span class="worker-star">★</span><span class="worker-star">★</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Rating Section -->
-    <div class="rating-section">
-      <div class="rating-category">
-        <h3>Quality of Work</h3>
-        <div class="stars" data-category="quality">
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
+      <div class="worker-info">
+        <img
+          src="https://img.freepik.com/free-photo/young-cleaning-guy-wearing-uniform-cap-holding-rag-with-cleaning-agent-isolated-white-wall_141793-122151.jpg?t=st=1735042377~exp=1735045977~hmac=edb368d59e72430ada894d5dcde4511f649e50af88f801215316ddaa8cea7101&w=740"
+          alt="Worker Avatar"
+          class="worker-avatar"
+        />
+        <div class="worker-details">
+          <h2 class="worker-name">Michael Cruz</h2>
+          <p class="worker-tasks">Light Carpentry</p>
+          <div class="worker-rating">
+            <span class="worker-star">★</span><span class="worker-star">★</span
+            ><span class="worker-star">★</span><span class="worker-star">★</span
+            ><span class="worker-star">★</span>
+          </div>
         </div>
       </div>
 
-      
-      <div class="rating-category">
-        <h3>Worker Service</h3>
-        <div class="stars" data-category="service">
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
+      <div class="rating-section">
+        <div class="rating-category">
+          <h3>Quality of Work</h3>
+          <div class="stars" data-category="quality">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="comment-section">
-      <h3>Leave a Feedback</h3>
-      <textarea id="comment" placeholder="Write your review here..." rows="4"></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button class="submit-button" onclick="submitReview()">Submit</button>
-
-    <!-- Modal Structure -->
-    <div id="appreciationModal" class="modal">
-      <div class="modal-content">
-        <div class="heart-icon">
-          <img src="https://thumbs.dreamstime.com/b/vector-red-heart-icon-shape-love-symbol-valentine-s-day-element-design-logo-mobile-app-interface-website-132180845.jpg" alt="Heart Icon" />
+        <div class="rating-category">
+          <h3>Worker Service</h3>
+          <div class="stars" data-category="service">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
         </div>
-        <h3>Thank you for rating!</h3>
-        <p>We appreciate you taking the time to rate the service. </p>
-        <button id="closeButton" class="close-button">Close</button>
-      </div>
-    </div>
 
-    <footer class="footer">
-        <a href="home.html" class="nav-item">
-          <img src="https://blogger.googleusercontent.com/img/a/AVvXsEimOlv-VSNFOi-pnlgq0Jtsvf9bDZsF3eIHxbvyONJYAT-kPHUH3dXtjU8yGc6NajD7iNAiX-ekL263ogP5EoznWraZIprkPREk47X_266_Dnx8-4XC1XidHBLY-fgRyeZN8BM37W3Va5U54n39UAgRB1hrgNZ3dcvDImmheM2plajp1WfQ4HvYLk8IGA" alt="Home">
-          <p>Home</p>
-        </a>
-        <a href="bookings.html" class="nav-item active">
-          <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhld8IIFBvzz1Dxj82boSjt1EvfnO7l6x2G0bPnC1cyH4bfgk4OV-GzxtLiB5suaUl9CSmM0-1wUkRwUmxkkXvzBOpmgiH3G-i6k-mFRziVwk8yX_qYcuf6yBZpN8p-Rqgo3hEewcdd4c0VtpeYa1hg7bYAR2PQ5tunAraQcdAZryjaaHJU8msmmTz2Zg" alt="Bookings">
-          <p>Bookings</p>
-        </a>
-        <a href="messages.html" class="nav-item">
-          <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh7XVqIv5prwkdy7ZbYIlN5enr4v8raZNTrU8xdBTZU6OzQBV3SgSQCfEUw1C69HESGPLwG5a4q1c5Ed_Uk0yHYXs5WEU9J_eigAzzfJDmZIRHdgVU9BT593ybmTclAeysJ14EBNVyN8Mc9_7eKxqxt8IezQWCLoCID0FYJ_WbImPH3IeMDd6YYnwNw-w" alt="Messages">
-          <p>Messages</p>
-        </a>
-        <a href="user-profile.html" class="nav-item">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqFjUEO0myZ4ieBl8gW4sPqvFZmg4z1QgC4Etu5hVupE1i2-wv787t2SrHXXOhjG1WIzKY-kJaNG2cQ3atOU818oAZChGNwQ65f0f4YieU2b2WFogQuRZjY1xO0tmdvuqOhuKjuEGj84cdAscimjoC1gu6Ah1F9T1uepddqaq2t0PQRwMqswf2107ebg/s1600/user%20(1).png" alt="Account">
-          <p>Account</p>
+        <div class="review-comment">
+          <label for="comment">Comment:</label>
+          <textarea
+            id="comment"
+            rows="4"
+            placeholder="Write your review here..."
+          ></textarea>
+        </div>
+
+        <div class="photo-upload">
+          <label for="photo-upload">Upload Photos:</label>
+          <input type="file" id="photo-upload" multiple />
+          <div id="photo-preview-container"></div>
+        </div>
+
+        <button class="submit-button" onclick="submitReview()">
+          Submit Review
         </button>
-      </footer>
-  </div>
-  <script src="rate.js"></script>
-</body>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const starContainers = document.querySelectorAll(".stars");
+
+        starContainers.forEach((container) => {
+          const stars = container.querySelectorAll(".star");
+          stars.forEach((star, index) => {
+            star.addEventListener("click", () => {
+              // Remove selected class from all stars
+              stars.forEach((s) => s.classList.remove("selected"));
+              // Add selected class up to the clicked star
+              for (let i = 0; i <= index; i++) {
+                stars[i].classList.add("selected");
+              }
+            });
+          });
+        });
+      });
+
+      // Function to handle photo upload and preview
+      document
+        .getElementById("photo-upload")
+        .addEventListener("change", (event) => {
+          const previewContainer = document.getElementById(
+            "photo-preview-container"
+          );
+          previewContainer.innerHTML = ""; // Clear previous previews
+
+          const files = event.target.files;
+          Array.from(files).forEach((file) => {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const img = document.createElement("img");
+              img.src = e.target.result;
+              img.alt = "Uploaded Photo";
+              img.className = "photo-preview";
+              previewContainer.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+          });
+        });
+
+      // Function to submit a review
+      function submitReview() {
+        const qualityRating = document.querySelectorAll(
+          '.stars[data-category="quality"] .star.selected'
+        ).length;
+        const serviceRating = document.querySelectorAll(
+          '.stars[data-category="service"] .star.selected'
+        ).length;
+        const comment = document.getElementById("comment").value;
+
+        const photoElements = document.querySelectorAll(
+          "#photo-preview-container img"
+        );
+        const photoURLs = Array.from(photoElements).map((img) => img.src);
+
+        const review = {
+          ratings: { quality: qualityRating, service: serviceRating },
+          reviewText: comment,
+          photoURLs,
+          date: new Date(),
+        };
+
+        // Store review in localStorage
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.push(review);
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+
+        alert("Review submitted successfully!");
+        window.location.href = "service-details.html"; // Redirect to worker's profile page
+      }
+    </script>
+  </body>
 </html>

@@ -1,110 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Worker Profile</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="service-details.css">
-</head>
-<body>
-  <header class="header">
-    <button class="back-button" onclick="window.history.back();">&larr; Back</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Profile</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="service-details.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button class="back-button" onclick="window.history.back();">
+        &larr; Back
+      </button>
+    </header>
+
+    <main class="profile-container">
+      <div class="profile-header">
+        <div class="profile-image-container">
+          <img
+            id="profile-picture"
+            src="https://img.freepik.com/free-photo/young-cleaning-guy-wearing-uniform-cap-holding-rag-with-cleaning-agent-isolated-white-wall_141793-122151.jpg?t=st=1735042377~exp=1735045977~hmac=edb368d59e72430ada894d5dcde4511f649e50af88f801215316ddaa8cea7101&w=740"
+            alt="Worker's Profile Picture"
+            class="profile-image"
+          />
+        </div>
+        <h1 id="profile-name" class="worker-name">Michael Cruz</h1>
+        <p class="worker-contact">09453-254-366</p>
+        <p class="worker-location">📍 Manila City</p>
+      </div>
+
+      <section class="about-section">
+        <h2>About</h2>
+        <p>
+          I am a skilled tradesman with extensive experience as a plumber, light
+          carpenter, painter, and mounting specialist. With over 10 years of
+          hands-on experience, I pride myself on delivering top-quality
+          workmanship and exceptional customer service.
+        </p>
+      </section>
+
+      <section class="skills-section">
+        <h2>Essential Skills</h2>
+        <button class="skill-button">Light Carpentry</button>
+      </section>
+
+      <section class="review-section">
+        <h2>Ratings</h2>
+        <div id="review-list"></div>
+      </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+      <span class="close-btn">&times;</span>
+      <img class="modal-content" id="modalImage" />
     </div>
-  </header>
 
-  <main class="profile-container">
-    <div class="profile-header">
-      <div class="profile-image-container">
-        <img src="https://img.freepik.com/free-photo/young-cleaning-guy-wearing-uniform-cap-holding-rag-with-cleaning-agent-isolated-white-wall_141793-122151.jpg?t=st=1735042377~exp=1735045977~hmac=edb368d59e72430ada894d5dcde4511f649e50af88f801215316ddaa8cea7101&w=740" alt="Worker's Profile Picture" class="profile-image">     
-     </div>
-      <h1 class="worker-name">Michael Cruz</h1>
-      <p class="worker-contact">09453-254-366</p>
-      <p class="worker-location">📍 Manila City</p>
-    </div>
+    <footer class="footer">
+      <section class="service-rate-section">
+        <h3>Service Rate:</h3>
+        <p class="service-rate">₱150/hr</p>
+      </section>
 
-    <section class="about-section">
-      <h2>About</h2>
-      <p>
-        I am a skilled tradesman with extensive experience as a plumber, light carpenter, painter, and mounting specialist. 
-        With over 10 years of hands-on experience, I pride myself on delivering top-quality workmanship and exceptional customer service.
-      </p>
-    </section>
+      <div class="button-container">
+        <a href="messages.html" class="message-button">Message</a>
+        <a href="request-service.html" class="request-button"
+          >Request Service</a
+        >
+      </div>
+    </footer>
 
-    <section class="skills-section">
-      <h2>Essential Skills</h2>
-      <button class="skill-button">Light Carpentry</button>
-    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        displayReviews();
+        displayAverages();
+      });
 
-    <section class="rating-section">
-      <h2>Rating</h2>
-      <div class="rating-container">
-        <span class="rating-value">5.0</span>
-        <div class="stars">
-          <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+      // Function to display reviews from localStorage
+      function displayReviews() {
+        const reviewContainer = document.querySelector("#review-list");
+        reviewContainer.innerHTML = ""; // Clear any previous content
+
+        const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        const userDetails =
+          JSON.parse(localStorage.getItem("userDetails")) || {};
+
+        if (reviews.length === 0) {
+          reviewContainer.innerHTML =
+            "<p>No reviews yet. Be the first to add one!</p>";
+          return;
+        }
+
+        reviews.forEach((review) => {
+          const reviewElement = document.createElement("div");
+          reviewElement.className = "review";
+
+          // Get reviewer's details
+          const reviewerName = `${userDetails.firstName || "Anonymous"} ${
+            userDetails.lastName || ""
+          }`;
+          const reviewerImage =
+            userDetails.profilePicture || "/dist/users/Images/default-user.png"; // Default profile picture if none exists
+
+          // Get stars for ratings
+          const qualityStars = getStarIcons(review.ratings.quality);
+          const serviceStars = getStarIcons(review.ratings.service);
+
+          // Generate photos HTML
+          const photosHTML = review.photoURLs
+            .map(
+              (url) =>
+                `<img src="${url}" alt="Review Photo" class="review-photo" onclick="viewLargerImage('${url}')">`
+            )
+            .join("");
+
+          // Construct review HTML
+          reviewElement.innerHTML = `
+
+      <div class="review-meta-container">
+        <div class="review-header">
+        <img src="${reviewerImage}" alt="${reviewerName}" class="reviewer-image">
+        <strong>${reviewerName}</strong>
+      </div>
+        <p><strong>Quality:</strong> ${qualityStars}</p>
+        <p><strong>Service:</strong> ${serviceStars}</p>
+        <p><strong>Review:</strong> ${review.reviewText}</p>
+        <p><small>${new Date(review.date).toLocaleString()}</small></p>
+        <div class="review-photos">
+          ${photosHTML}
         </div>
       </div>
-    </section>
+    `;
+          reviewContainer.appendChild(reviewElement);
+        });
+      }
 
-    <section class="review-section">
-        <h2>Reviews</h2>
-        <div id="review-list"></div>
-    </section>
-  </main>
-  
+      // Function to display average ratings
+      function displayAverages() {
+        const reviewContainer = document.querySelector("#review-list");
+        const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
 
+        if (reviews.length === 0) return;
 
-  <footer class="footer">
-    <section class="service-rate-section">
-      <h3>Service Rate:</h3>
-      <p class="service-rate">₱150/hr</p>
-    </section>
+        let totalQuality = 0;
+        let totalService = 0;
 
-    <div class="button-container">
-      <a href="messages.html" class="message-button">Message</a>
-      <a href="request-service.html" class="request-button">Request Service</a>
-    </div>
-  </footer>
+        reviews.forEach((review) => {
+          totalQuality += review.ratings.quality;
+          totalService += review.ratings.service;
+        });
 
-  <script>
-    function loadReviews() {
-      const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-      const reviewList = document.getElementById('review-list');
+        const averageQuality = (totalQuality / reviews.length).toFixed(1);
+        const averageService = (totalService / reviews.length).toFixed(1);
 
+        const averagesElement = document.createElement("div");
+        averagesElement.className = "review-averages";
+        averagesElement.innerHTML = `
+          <p><strong>Quality of Work:</strong> ${getStarIcons(
+            Math.round(averageQuality)
+          )}</p>
+          <p><strong>Worker Service:</strong> ${getStarIcons(
+            Math.round(averageService)
+          )}</p>
+        `;
 
+        reviewContainer.insertBefore(
+          averagesElement,
+          reviewContainer.firstChild
+        );
+      }
 
-      // Retrieve the current user's details
-      const userDetails = JSON.parse(localStorage.getItem("userDetails"));
+      // Function to generate star icons
+      function getStarIcons(count) {
+        const fullStar = "⭐";
+        const emptyStar = "☆";
+        return fullStar.repeat(count) + emptyStar.repeat(5 - count);
+      }
 
-      reviews.forEach((review) => {
-        if (review.workerId === 'michael-cruz') { // Show reviews only for this worker
-          const reviewCard = document.createElement('div');
-          reviewCard.classList.add('service-card');
-          
-          // Get the reviewer's name and image from the stored userDetails
-          const reviewerName = userDetails ? `${userDetails.firstName} ${userDetails.lastName}` : 'Anonymous';
-          const reviewerImage = userDetails ? userDetails.profilePicture : '/dist/users/Images/default-user.png'; // Default image if none exists
+      // Function to view the larger image in a modal
+      function viewLargerImage(imageUrl) {
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const closeBtn = document.querySelector(".close-btn");
 
-          reviewCard.innerHTML = `
-            <div class="review-header">
-              <img src="${reviewerImage}" alt="Reviewer Image" class="reviewer-image">
-              <strong>${reviewerName}</strong>
-            </div>
-            <div class="service-info">
-              <p><strong>Review:</strong> ${review.comment || 'No comment provided'}</p>
-              <p><strong>Quality Rating:</strong> ${review.qualityRating} ⭐</p>
-              <p><strong>Service Rating:</strong> ${review.serviceRating} ⭐</p>
-            </div>
-          `;
-          reviewList.appendChild(reviewCard);
-        }
-      });
-    }
+        modalImage.src = imageUrl;
+        modal.style.display = "flex";
 
-    // localStorage.removeItem('reviews');
+        closeBtn.addEventListener("click", () => {
+          modal.style.display = "none";
+        });
 
-    document.addEventListener('DOMContentLoaded', loadReviews);
+        window.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+      }
 
-  </script>
-</body>
+      // Load reviews on page load
+      document.addEventListener("DOMContentLoaded", loadReviews);
+
+      // localStorage.removeItem('reviews');
+    </script>
+  </body>
 </html>
