@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Reviews</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/users/home-services.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button class="back-button" onclick="history.back()">←</button>
+      <h1>My Reviews</h1>
+    </header>
+
+    <main class="service-list">
+      <!-- Review cards will be inserted here dynamically -->
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        const serviceList = document.querySelector(".service-list");
+
+        reviews.forEach((review) => {
+          // Check if this review corresponds to the worker you want to show reviews for (e.g., Michael Cruz)
+          if (review.workerId === "michael-cruz") {
+            const reviewCard = document.createElement("div");
+            reviewCard.classList.add("service-card");
+
+            // Add review content to the card
+            reviewCard.innerHTML = `
+              <img src="/dist/users/Images/michael2.png" alt="Reviewer Image" class="reviewer-image" />
+              <div class="service-info">
+                <h3>Michael Cruz</h3>
+                <p><strong>Feedback:</strong> ${
+                  review.comment || "No comment provided"
+                }</p>
+                <p><strong>Quality Rating:</strong> ${
+                  review.qualityRating
+                } ⭐</p>
+                <p><strong>Service Rating:</strong> ${
+                  review.serviceRating
+                } ⭐</p>
+              </div>
+            `;
+
+            serviceList.appendChild(reviewCard);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
