@@ -35,3 +35,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const submitButton = document.querySelector(".submit-button");
+  const modal = document.getElementById("successModal");
+  const closeModalBtn = document.getElementById("closeModalX");
+
+  // Show modal on submit if all fields are filled
+  submitButton.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Check if all required fields are filled
+    const phone = document.getElementById("phone").value.trim();
+    const resume = document.getElementById("resume-upload").files.length > 0;
+    const area = document.getElementById("area-select").value;
+    const termsChecked = document.getElementById("terms-checkbox").checked;
+
+    if (phone && resume && area && termsChecked) {
+      modal.style.display = "flex"; // Show the modal
+    } else {
+      alert(
+        "Please fill out all fields and agree to the terms before submitting."
+      );
+    }
+  });
+
+  // Close modal when the close button is clicked
+  closeModalBtn.addEventListener("click", function () {
+    modal.style.display = "none"; // Hide the modal
+  });
+
+  // Close modal when clicking outside of it
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none"; // Hide the modal
+    }
+  });
+});
