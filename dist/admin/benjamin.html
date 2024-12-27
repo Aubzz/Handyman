@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Details</title>
+    <link rel="stylesheet" href="worker-details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a
+            href="workers.html"
+            class="back-arrow"
+            onclick="window.history.back();"
+            >&#x2190;</a
+          >
+          <h1>Worker Details</h1>
+        </div>
+      </header>
+      <main>
+        <div class="card">
+          <div class="avatar">
+            <img
+              src="https://img.freepik.com/free-photo/portrait-man-working-construction_23-2151230014.jpg?t=st=1734190409~exp=1734194009~hmac=a8dff86a18b4866976e20eabca9df8cf5d1ba022d24e2823d9a6458a1c993aa4&w=1060"
+              alt="Plumbing"
+            />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Benjamin Santos</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">09592-321-421</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Manila City</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Expertise</p>
+          <p class="value">Electrical Installations</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rating</p>
+          <p class="value">⭐5.0 - Professional</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rate</p>
+          <!-- The rate value will be updated dynamically -->
+          <p class="value" id="-rate">₱1300/hr</p>
+          <a href="aubrey-rate.html" class="edit">Edit</a>
+        </div>
+      </main>
+    </div>
+    <script src="aubrey.js"></script>
+  </body>
+</html>

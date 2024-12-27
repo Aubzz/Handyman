@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Details</title>
+    <link rel="stylesheet" href="worker-details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a
+            href="workers.html"
+            class="back-arrow"
+            onclick="window.history.back();"
+            >&#x2190;</a
+          >
+          <h1>Worker Details</h1>
+        </div>
+      </header>
+      <main>
+        <div class="card">
+          <div class="avatar">
+            <img
+              src="https://img.freepik.com/free-photo/portrait-man-working-as-plumber_23-2151230004.jpg?t=st=1734188295~exp=1734191895~hmac=d01ba5d2ea388157174b0f51b94e94171bd40a95db332fa5e0afbd25d12f5d79&w=1380"
+              alt="Plumbing"
+            />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Justine Balingit</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">09121-321-655</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Manila City</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Expertise</p>
+          <p class="value">Gas Line Plumbing</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rating</p>
+          <p class="value">⭐ 4.9 - Experienced</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rate</p>
+          <!-- The rate value will be updated dynamically -->
+          <p class="value" id="-rate">₱510/hr</p>
+          <a href="aubrey-rate.html" class="edit">Edit</a>
+        </div>
+      </main>
+    </div>
+    <script src="aubrey.js"></script>
+  </body>
+</html>

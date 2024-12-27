@@ -78,8 +78,8 @@
         {
           id: 2,
           name: "Lito Vargas",
-          lat: 14.64006,
-          lng: 121.02436,
+          lat: 14.64571,
+          lng: 121.03071,
           job: "Carpentry",
           location: "Quezon City",
           profileUrl: "/dist/users/service-lito.html",
@@ -147,6 +147,195 @@
           location: "Quezon City",
           profileUrl: "/dist/users/service-bong.html",
         },
+        {
+          id: 9,
+          name: "Jose Manlangit",
+          lat: 14.58956,
+          lng: 121.00513,
+          job: "Carpentry",
+          location: "Manila",
+          profileUrl: "/dist/users/service-jose.html",
+        },
+        {
+          id: 10,
+          name: "Toni Morales",
+          lat: 14.54653,
+          lng: 120.99998,
+          job: "Carpentry",
+          location: "Pasay",
+          profileUrl: "/dist/users/service-toni.html",
+        },
+        {
+          id: 11,
+          name: "Vic Torres",
+          lat: 14.54608,
+          lng: 121.01097,
+          job: "Carpentry",
+          location: "Pasay",
+          profileUrl: "/dist/users/service-vic.html",
+        },
+        {
+          id: 12,
+          name: "Joey Cortez",
+          lat: 14.57777,
+          lng: 120.99209,
+          job: "Carpentry",
+          location: "Manila",
+          profileUrl: "/dist/users/service-joey.html",
+        },
+        {
+          id: 13,
+          name: "Justin Balingit",
+          lat: 14.58956,
+          lng: 121.00513,
+          job: "Plumber",
+          location: "Manila",
+          profileUrl: "/dist/users/service-justin.html",
+        },
+        {
+          id: 14,
+          name: "Jacob Lopez",
+          lat: 14.54653,
+          lng: 120.99998,
+          job: "Plumber",
+          location: "Pasay",
+          profileUrl: "/dist/users/service-jacob.html",
+        },
+        {
+          id: 15,
+          name: "Rodel De Jesus",
+          lat: 14.60186,
+          lng: 120.9787,
+          job: "Plumber",
+          location: "Manila",
+          profileUrl: "/dist/users/service-rodel.html",
+        },
+        {
+          id: 16,
+          name: "Mariel Mariano",
+          lat: 14.57777,
+          lng: 120.99209,
+          job: "Plumber",
+          location: "Manila",
+          profileUrl: "/dist/users/service-mariel.html",
+        },
+        {
+          id: 17,
+          name: "Shanne Dugang",
+          lat: 14.57577,
+          lng: 120.99209,
+          job: "Electrician",
+          location: "Manila",
+          profileUrl: "/dist/users/service-shanne.html",
+        },
+        {
+          id: 18,
+          name: "Miguel Severino",
+          lat: 14.58556,
+          lng: 121.00513,
+          job: "Electrician",
+          location: "Manila",
+          profileUrl: "/dist/users/service-miguel.html",
+        },
+        {
+          id: 19,
+          name: "Rhoda Lyn",
+          lat: 14.54653,
+          lng: 120.99998,
+          job: "Electrician",
+          location: "Pasay",
+          profileUrl: "/dist/users/service-rhoda.html",
+        },
+        {
+          id: 20,
+          name: "Benjamin Santos",
+          lat: 14.61186,
+          lng: 120.9787,
+          job: "Electrician",
+          location: "Manila",
+          profileUrl: "/dist/users/service-benjamin.html",
+        },
+        {
+          id: 21,
+          name: "Patrick Guzman",
+          lat: 14.64189,
+          lng: 121.05028,
+          job: "Electrician",
+          location: "Manila",
+          profileUrl: "/dist/users/service-patrick.html",
+        },
+        {
+          id: 22,
+          name: "Nong Manalo",
+          lat: 14.50848,
+          lng: 120.98977,
+          job: "Repair",
+          location: "Parañaque City",
+          profileUrl: "/dist/users/service-nong.html",
+        },
+        {
+          id: 23,
+          name: "Warren Reyes",
+          lat: 14.57719,
+          lng: 120.99029,
+          job: "Repair",
+          location: "Manila",
+          profileUrl: "/dist/users/service-warren.html",
+        },
+        {
+          id: 24,
+          name: "Erick Valenciano",
+          lat: 14.59255,
+          lng: 120.98857,
+          job: "Repair",
+          location: "Manila",
+          profileUrl: "/dist/users/service-erick.html",
+        },
+        {
+          id: 25,
+          name: "Gary Gomez",
+          lat: 14.61186,
+          lng: 120.9787,
+          job: "Painting",
+          location: "Manila",
+          profileUrl: "/dist/users/service-gary.html",
+        },
+        {
+          id: 26,
+          name: "Oweng Chavez",
+          lat: 14.54969,
+          lng: 120.99363,
+          job: "Painting",
+          location: "Pasay",
+          profileUrl: "/dist/users/service-oweng.html",
+        },
+        {
+          id: 27,
+          name: "Rene Regelado",
+          lat: 14.45596,
+          lng: 120.96136,
+          job: "Painting",
+          location: "Bacoor City",
+          profileUrl: "/dist/users/service-rene.html",
+        },
+        {
+          id: 28,
+          name: "Emer Decena",
+          lat: 14.57918,
+          lng: 120.98042,
+          job: "Painting",
+          location: "Manila",
+          profileUrl: "/dist/users/service-emer.html",
+        },
+        {
+          id: 29,
+          name: "Anton Reyes",
+          lat: 14.59239,
+          lng: 120.97758,
+          job: "Painting",
+          location: "Manila",
+          profileUrl: "/dist/users/service-anton.html",
+        },
       ];
 
       // Initialize the map
@@ -159,18 +348,19 @@
       // Store markers globally
       let workerMarkers = [];
 
-      // Function to create markers and hide them initially
+      // Function to create markers and add them to the map initially
       function createWorkerMarkers() {
         workers.forEach((worker) => {
-          const marker = L.marker([worker.lat, worker.lng], { opacity: 0 });
+          const marker = L.marker([worker.lat, worker.lng]);
           marker.bindPopup(`
-            <div>
-              <h3>${worker.name}</h3>
-              <p><a href="${worker.profileUrl}" target="_blank">${worker.job}</a></p>
-              <p>${worker.location}</p>
-            </div>
-          `);
+      <div>
+        <h3>${worker.name}</h3>
+        <p><a href="${worker.profileUrl}" target="_blank">${worker.job}</a></p>
+        <p>${worker.location}</p>
+      </div>
+    `);
           workerMarkers.push({ marker, job: worker.job.toLowerCase() });
+          marker.addTo(map); // Show all markers initially
         });
       }
 
@@ -186,7 +376,6 @@
         workerMarkers.forEach(({ marker, job }) => {
           if (job.includes(jobSearch.toLowerCase())) {
             marker.addTo(map);
-            marker.setOpacity(1);
           } else {
             map.removeLayer(marker);
           }

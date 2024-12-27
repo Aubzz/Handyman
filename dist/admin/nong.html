@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Details</title>
+    <link rel="stylesheet" href="worker-details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a
+            href="workers.html"
+            class="back-arrow"
+            onclick="window.history.back();"
+            >&#x2190;</a
+          >
+          <h1>Worker Details</h1>
+        </div>
+      </header>
+      <main>
+        <div class="card">
+          <div class="avatar">
+            <img
+              src="https://img.freepik.com/free-photo/male-worker-wearing-work-clothes_273609-10971.jpg?t=st=1734190933~exp=1734194533~hmac=022c020b2a88fde82e52635f0c3a4a6b35f8668b34d17cbe76313d934c930264&w=1060"
+              alt="Worker's Profile Picture"
+              alt="Plumbing"
+            />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Nong Manalo</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">09122-214-125</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Parañaque City</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Expertise</p>
+          <p class="value">Appliance Repair Services</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rating</p>
+          <p class="value">⭐ 5.0 - Professional</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rate</p>
+          <!-- The rate value will be updated dynamically -->
+          <p class="value" id="-rate">₱820/hr</p>
+          <a href="aubrey-rate.html" class="edit">Edit</a>
+        </div>
+      </main>
+    </div>
+    <script src="aubrey.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Details</title>
+    <link rel="stylesheet" href="worker-details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a
+            href="workers.html"
+            class="back-arrow"
+            onclick="window.history.back();"
+            >&#x2190;</a
+          >
+          <h1>Worker Details</h1>
+        </div>
+      </header>
+      <main>
+        <div class="card">
+          <div class="avatar">
+            <img
+              src="https://img.freepik.com/premium-photo/man-with-his-arms-crossed-wearing-apron_1024356-12479.jpg?w=1060"
+              alt="House Cleaning"
+            />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Emer Decena</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">09522-123-431</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Manila City</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Expertise</p>
+          <p class="value">Fence and Gate Painting</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rating</p>
+          <p class="value">⭐4.9 - Experienced</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rate</p>
+          <!-- The rate value will be updated dynamically -->
+          <p class="value" id="-rate">₱215/hr</p>
+          <a href="aubrey-rate.html" class="edit">Edit</a>
+        </div>
+      </main>
+    </div>
+    <script src="aubrey.js"></script>
+  </body>
+</html>

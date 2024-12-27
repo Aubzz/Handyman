@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Details</title>
+    <link rel="stylesheet" href="worker-details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <a
+            href="workers.html"
+            class="back-arrow"
+            onclick="window.history.back();"
+            >&#x2190;</a
+          >
+          <h1>Worker Details</h1>
+        </div>
+      </header>
+      <main>
+        <div class="card">
+          <div class="avatar">
+            <img
+              src="https://img.freepik.com/free-photo/portrait-person-working-construction-industry_23-2151349696.jpg?t=st=1734189635~exp=1734193235~hmac=93d572af1626c4f25fa65a069013017b91360fe9b5e6384b632d582e2781ae6b&w=360"
+              alt="Plumbing"
+            />
+          </div>
+          <div class="details">
+            <p class="applicant-id">Rhoda Lyn</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <p class="label">Mobile Number</p>
+          <p class="value">09212-123-655</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Area</p>
+          <p class="value">Pasay City</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Expertise</p>
+          <p class="value">HVAC Electrical Work</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rating</p>
+          <p class="value">⭐ 5.0 - Professional</p>
+        </div>
+        <div class="info-block">
+          <p class="label">Rate</p>
+          <!-- The rate value will be updated dynamically -->
+          <p class="value" id="-rate">₱1300/hr</p>
+          <a href="aubrey-rate.html" class="edit">Edit</a>
+        </div>
+      </main>
+    </div>
+    <script src="aubrey.js"></script>
+  </body>
+</html>

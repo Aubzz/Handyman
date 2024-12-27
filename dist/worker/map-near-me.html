@@ -33,7 +33,7 @@
     <div id="map"></div>
 
     <footer class="footer">
-      <a href="home.html" class="nav-item active">
+      <a href="home-worker.html" class="nav-item active">
         <img
           src="https://blogger.googleusercontent.com/img/a/AVvXsEimOlv-VSNFOi-pnlgq0Jtsvf9bDZsF3eIHxbvyONJYAT-kPHUH3dXtjU8yGc6NajD7iNAiX-ekL263ogP5EoznWraZIprkPREk47X_266_Dnx8-4XC1XidHBLY-fgRyeZN8BM37W3Va5U54n39UAgRB1hrgNZ3dcvDImmheM2plajp1WfQ4HvYLk8IGA"
           alt="Home"
@@ -54,7 +54,7 @@
         />
         <p>Messages</p>
       </a>
-      <a href="logged-out.html" class="nav-item">
+      <a href="worker-profile.html" class="nav-item">
         <img
           src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqFjUEO0myZ4ieBl8gW4sPqvFZmg4z1QgC4Etu5hVupE1i2-wv787t2SrHXXOhjG1WIzKY-kJaNG2cQ3atOU818oAZChGNwQ65f0f4YieU2b2WFogQuRZjY1xO0tmdvuqOhuKjuEGj84cdAscimjoC1gu6Ah1F9T1uepddqaq2t0PQRwMqswf2107ebg/s1600/user%20(1).png"
           alt="Account"
@@ -78,8 +78,8 @@
         {
           id: 2,
           name: "Loraine Alagano",
-          lat: 14.64006,
-          lng: 121.02436,
+          lat: 14.63541,
+          lng: 121.04891,
           job: "Carpentry",
           location: "Quezon City",
           profileUrl: "/dist/users/post-job.html",
@@ -87,8 +87,8 @@
         {
           id: 3,
           name: "Jea Dugang",
-          lat: 14.64853,
-          lng: 121.02539,
+          lat: 14.6296,
+          lng: 121.03741,
           job: "Plumber",
           location: "Quezon City",
           profileUrl: "/dist/users/post-job.html",
@@ -114,8 +114,8 @@
         {
           id: 6,
           name: "Dianne Taguibao",
-          lat: 14.5997,
-          lng: 120.9829,
+          lat: 14.58778,
+          lng: 121.00428,
           job: "Repair",
           location: "Manila",
           profileUrl: "/dist/users/post-job.html",
@@ -125,7 +125,7 @@
           name: "Andrea Carpio",
           lat: 14.64704,
           lng: 120.97836,
-          job: "Repair",
+          job: "Painting",
           location: "Caloocan City",
           profileUrl: "/dist/users/post-job.html",
         },
@@ -136,6 +136,51 @@
           lng: 120.9929,
           job: "Repair",
           location: "Caloocan City",
+          profileUrl: "/dist/users/post-job.html",
+        },
+        {
+          id: 9,
+          name: "Ella Munoz",
+          lat: 14.61182,
+          lng: 120.97561,
+          job: "Plumber",
+          location: "Manila",
+          profileUrl: "/dist/users/post-job.html",
+        },
+        {
+          id: 10,
+          name: "Jane De Leon",
+          lat: 14.46436,
+          lng: 120.95033,
+          job: "Electrician",
+          location: "Bacoor",
+          profileUrl: "/dist/users/post-job.html",
+        },
+        {
+          id: 11,
+          name: "Patricia Baluyot",
+          lat: 14.5797,
+          lng: 120.9829,
+          job: "Carpentry",
+          location: "Manila",
+          profileUrl: "/dist/users/post-job.html",
+        },
+        {
+          id: 12,
+          name: "Rain Dizon",
+          lat: 14.65704,
+          lng: 120.97836,
+          job: "Repair",
+          location: "Caloocan City",
+          profileUrl: "/dist/users/post-job.html",
+        },
+        {
+          id: 13,
+          name: "Lucas Pangilinan",
+          lat: 14.55617,
+          lng: 120.99398,
+          job: "Carpentry",
+          location: "Pasay City",
           profileUrl: "/dist/users/post-job.html",
         },
       ];
@@ -150,18 +195,19 @@
       // Store markers globally
       let workerMarkers = [];
 
-      // Function to create markers and hide them initially
+      // Function to create markers and add them to the map initially
       function createWorkerMarkers() {
         workers.forEach((worker) => {
-          const marker = L.marker([worker.lat, worker.lng], { opacity: 0 });
+          const marker = L.marker([worker.lat, worker.lng]);
           marker.bindPopup(`
-            <div>
-              <h3>${worker.name}</h3>
-              <p><a href="${worker.profileUrl}" target="_blank">${worker.job}</a></p>
-              <p>${worker.location}</p>
-            </div>
-          `);
+      <div>
+        <h3>${worker.name}</h3>
+        <p><a href="${worker.profileUrl}" target="_blank">${worker.job}</a></p>
+        <p>${worker.location}</p>
+      </div>
+    `);
           workerMarkers.push({ marker, job: worker.job.toLowerCase() });
+          marker.addTo(map); // Show all markers initially
         });
       }
 
@@ -177,7 +223,6 @@
         workerMarkers.forEach(({ marker, job }) => {
           if (job.includes(jobSearch.toLowerCase())) {
             marker.addTo(map);
-            marker.setOpacity(1);
           } else {
             map.removeLayer(marker);
           }

@@ -16,42 +16,65 @@
       <h1>My Reviews</h1>
     </header>
 
-    <main class="service-list">
+    <main class="service-list" id="review-container">
       <!-- Review cards will be inserted here dynamically -->
     </main>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        displayReviews();
+      });
+
+      // Function to display reviews from localStorage
+      function displayReviews() {
+        const reviewContainer = document.getElementById("review-container");
+        reviewContainer.innerHTML = ""; // Clear any previous content
+
         const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-        const serviceList = document.querySelector(".service-list");
+
+        if (reviews.length === 0) {
+          reviewContainer.innerHTML = "<p>No reviews submitted yet.</p>";
+          return;
+        }
 
         reviews.forEach((review) => {
-          // Check if this review corresponds to the worker you want to show reviews for (e.g., Michael Cruz)
-          if (review.workerId === "michael-cruz") {
-            const reviewCard = document.createElement("div");
-            reviewCard.classList.add("service-card");
+          const reviewElement = document.createElement("div");
+          reviewElement.className = "review-card";
 
-            // Add review content to the card
-            reviewCard.innerHTML = `
-              <img src="https://img.freepik.com/free-photo/young-cleaning-guy-wearing-uniform-cap-holding-rag-with-cleaning-agent-isolated-white-wall_141793-122151.jpg?t=st=1735042377~exp=1735045977~hmac=edb368d59e72430ada894d5dcde4511f649e50af88f801215316ddaa8cea7101&w=740" alt="Reviewer Image" class="reviewer-image" />
-              <div class="service-info">
-                <h3>Michael Cruz</h3>
-                <p><strong>Feedback:</strong> ${
-                  review.comment || "No comment provided"
-                }</p>
-                <p><strong>Quality Rating:</strong> ${
-                  review.qualityRating
-                } ⭐</p>
-                <p><strong>Service Rating:</strong> ${
-                  review.serviceRating
-                } ⭐</p>
-              </div>
-            `;
+          // Get stars for ratings
+          const qualityStars = getStarIcons(review.ratings.quality);
+          const serviceStars = getStarIcons(review.ratings.service);
 
-            serviceList.appendChild(reviewCard);
-          }
+          // Generate photos HTML
+          const photosHTML = review.photoURLs
+            .map(
+              (url) =>
+                `<img src="${url}" alt="Review Photo" class="review-photo">`
+            )
+            .join("");
+
+          // Construct review card HTML
+          reviewElement.innerHTML = `
+            <div class="review-meta-container">
+              <p><strong>Quality:</strong> <span class="review-stars">${qualityStars}</span></p>
+              <p><strong>Service:</strong> <span class="review-stars">${serviceStars}</span></p>
+              <p><strong>Review:</strong> ${review.reviewText}</p>
+              <p><small>${new Date(review.date).toLocaleString()}</small></p>
+            </div>
+            <div class="review-photos">
+              ${photosHTML}
+            </div>
+          `;
+          reviewContainer.appendChild(reviewElement);
         });
-      });
+      }
+
+      // Function to generate star icons
+      function getStarIcons(count) {
+        const fullStar = "★";
+        const emptyStar = "☆";
+        return fullStar.repeat(count) + emptyStar.repeat(5 - count);
+      }
     </script>
   </body>
 </html>
