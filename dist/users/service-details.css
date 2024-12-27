@@ -218,6 +218,12 @@ body {
   text-align: center;
 }
 
+.service-rate-section {
+  border-top: 1px solid #ddd; /* Matches the border-top of other sections */
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
 .service-rate {
   font-size: 20px;
   font-weight: bold;

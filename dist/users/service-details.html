@@ -136,6 +136,7 @@
     `;
           reviewContainer.appendChild(reviewElement);
         });
+        localStorage.removeItem("reviews");
       }
 
       // Function to display average ratings
@@ -202,8 +203,6 @@
 
       // Load reviews on page load
       document.addEventListener("DOMContentLoaded", loadReviews);
-
-      // localStorage.removeItem('reviews');
     </script>
   </body>
 </html>

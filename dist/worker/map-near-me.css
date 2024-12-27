@@ -1,0 +1,134 @@
+/* General styles for consistent layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 90.5vh; /* Adjusted to ensure full height */
+  margin: 0;
+}
+
+/* Header styles */
+header {
+  background-color: #ffa726;
+  color: white;
+  position: relative;
+  padding: 10px 0;
+  display: flex;
+  align-items: center; /* Ensures vertical centering */
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header .back-button {
+  font-size: 25px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-bar {
+  position: relative;
+  width: 80%;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Map container */
+#map {
+  flex: 1;
+  height: calc(100vh - 160px); /* Full height minus header and footer height */
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+/* Footer Navigation styles */
+.footer a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer .nav-item {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.nav-item img {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 5px;
+  filter: grayscale(100%);
+}
+
+.nav-item.active {
+  color: #ff9800;
+}
+
+.nav-item.active img {
+  filter: none;
+}
+
+.nav-item p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.footer .nav-item:hover {
+  color: #ff9800;
+}
+
+.footer .nav-item img:hover {
+  filter: none;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  #map {
+    height: 300px;
+  }
+  header .back-button {
+    font-size: 20px;
+  }
+  header .search-bar input {
+    padding: 10px 30px;
+  }
+}
