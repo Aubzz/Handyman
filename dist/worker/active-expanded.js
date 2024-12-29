@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   confirmActionButton.addEventListener("click", () => {
     closeModal(confirmationModal);
-    window.location.href = "/dist/worker/start-job.html"; // Replace with the actual file path or URL
+    window.location.href = "start-job.html"; // Replace with the actual file path or URL
   });
 
   cancelConfirmButton.addEventListener("click", () => {

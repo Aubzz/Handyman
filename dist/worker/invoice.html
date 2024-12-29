@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Invoice</title>
+    <link rel="stylesheet" href="invoice-style.css" />
+  </head>
+  <body>
+    <div class="invoice-container">
+      <button class="back-arrow" onclick="window.history.back();">
+        &larr;
+      </button>
+      <h2>Service Invoice</h2>
+      <div class="section white-bg">
+        <p><strong>Services:</strong> Light Carpentry</p>
+        <p><strong>Category:</strong> Ceiling Repair</p>
+        <p><strong>Service Provider:</strong> Michael Cruz</p>
+        <p><strong>Date & Time:</strong> January 06, 2025 | 1:00 PM</p>
+      </div>
+
+      <div class="section white-bg">
+        <h3>Pricing Details</h3>
+
+        <div class="row">
+          <label for="hours-worked">Hours Worked:</label>
+          <input
+            type="number"
+            id="hours-worked"
+            placeholder="Enter hours worked"
+          />
+        </div>
+
+        <div class="row">
+          <label for="rate-per-hour">Rate per Hour (₱):</label>
+          <input
+            type="number"
+            id="rate-per-hour"
+            placeholder="Enter rate per hour"
+          />
+        </div>
+
+        <div class="row">
+          <label>Subtotal:</label>
+          <span id="subtotal">₱0.00</span>
+        </div>
+
+        <div class="row">
+          <label for="other-expenses">Other Expenses (₱):</label>
+          <input
+            type="number"
+            id="other-expenses"
+            placeholder="Enter other expenses"
+          />
+        </div>
+
+        <div class="row">
+          <label>Total:</label>
+          <span id="total">₱0.00</span>
+        </div>
+      </div>
+
+      <div class="section white-bg">
+        <p><strong>Additional Message:</strong></p>
+        <textarea
+          id="additional-message"
+          placeholder="Type your message here..."
+        ></textarea>
+      </div>
+
+      <button class="send-btn" onclick="location='conversation.html';">
+        Send to Client
+      </button>
+    </div>
+
+    <script src="invoice-script.js"></script>
+  </body>
+</html>

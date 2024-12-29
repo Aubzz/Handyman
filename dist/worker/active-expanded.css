@@ -50,6 +50,14 @@ header h1 {
   border-bottom: 2px solid #ffa726;
 }
 
+.cancelService,
+.explain,
+.modal-content h2,
+.modal-content p {
+  color: #202020;
+  margin-top: 20px;
+}
+
 /* Booking Card */
 .booking-card {
   background: #fff;
