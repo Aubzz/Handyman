@@ -60,5 +60,5 @@ document.querySelector(".send-btn").addEventListener("click", () => {
   alert("Invoice data has been saved!");
 
   // Redirect to conversation.html
-  window.location.href = "conversation.html";
+  window.location.href = "message-booking.html";
 });

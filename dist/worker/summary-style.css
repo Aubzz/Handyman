@@ -1,0 +1,355 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.summary-container {
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-icon img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+.header {
+  background: linear-gradient(90deg, #ffae00, #ffcc00);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: start;
+  height: 100px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.back-arrow {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 17px;
+  margin-bottom: px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: normal;
+  color: #fff;
+  flex-grow: 1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Profile Section Overlapping the Orange Box */
+.profile-header {
+  /* background: #fff;
+  padding: 15px;
+  margin-top: -35px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1; */
+  background: #fff;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-details {
+  font-weight: 700;
+}
+
+.profile-details p {
+  margin-bottom: 10px;
+}
+.profile-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+.service-card {
+  background: #fff;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.user-details {
+  flex-grow: 1;
+}
+
+.user-details h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.user-details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.message-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+/* Content sections below the header */
+.white-bg {
+  background: #fff;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.message-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f7b731;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #e5a325;
+}
+
+.confirm-btn {
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+/* Modal container */
+.modal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.cancel-btn,
+.confirm-btn {
+  width: 160px; /* Set a fixed width */
+  height: 40px; /* Set a fixed height */
+  border-radius: 20px;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cancel-btn {
+  background: #e0e0e0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background: linear-gradient(90deg, #ffa726, #ffcc80);
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+/* View other requests button */
+.view-button {
+  background: linear-gradient(90deg, #ffa726, #ffcc80);
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 13px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.view-button a {
+  text-decoration: none;
+  color: black;
+}
+
+.close-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+.close-icon img {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .summary-container {
+    width: 100%; /* Allow container to be 100% of the viewport width */
+    max-width: none; /* Remove max-width limitation */
+    margin: 10px; /* Reduce margin on smaller screens */
+  }
+
+  .orange-box {
+    padding: 15px 10px; /* Reduce padding for smaller screens */
+    height: 60px; /* Adjust height */
+  }
+
+  h2 {
+    font-size: 18px; /* Reduce header font size on smaller screens */
+  }
+
+  .profile-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-info p {
+    font-size: 12px; /* Reduce font size */
+  }
+
+  .white-bg {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px; /* Adjust button font size */
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-container {
+    padding: 10px; /* Ensure there's padding on all sides */
+  }
+
+  .orange-box {
+    padding: 15px 10px;
+    height: 50px; /* Further reduce height */
+  }
+
+  h2 {
+    font-size: 16px; /* Even smaller font size */
+  }
+
+  .profile-img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .profile-info p {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 14px; /* Keep button font size consistent */
+    padding: 12px;
+  }
+}

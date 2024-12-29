@@ -128,5 +128,5 @@ confirmButton.addEventListener("click", () => {
   // Hide the modal
   requestModal.style.display = "none";
   // Redirect to the bookings page
-  location.href = "/users/bookings.html";
+  location.href = "/dist/users/bookings.html";
 });

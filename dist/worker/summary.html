@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Summary</title>
+    <link rel="stylesheet" href="summary-style.css" />
+  </head>
+
+  <body>
+    <div class="summary-container">
+      <!-- Orange Box with Arrow Button and Service Summary Title -->
+      <header class="header">
+        <a href="home-worker.html" class="back-arrow">&#8592;</a>
+        <h1 class="title">Service Request</h1>
+      </header>
+
+      <!-- Profile Section Overlapping the Orange Box -->
+      <div class="service-card">
+        <div class="user-info">
+          <!-- Profile Image -->
+          <img
+            src="https://media.licdn.com/dms/image/v2/D5603AQGhgenbC9WEDQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1698993043561?e=2147483647&v=beta&t=SfZDjUtglLZsabLNlvgVTmxiql2ZPWPSfRWenrBdhaU"
+            alt="Dianne Taguibao"
+            class="profile-img"
+          />
+
+          <!-- User Details (Name and Number) -->
+          <div class="user-details">
+            <h4>Dianne Taguibao</h4>
+            <p>09123-456-789</p>
+          </div>
+
+          <!-- Message Icon -->
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/7422/7422010.png"
+            alt="Message Icon"
+            class="message-icon"
+            onclick="location='message-booking.html';"
+          />
+        </div>
+      </div>
+
+      <!-- Summary Content Sections -->
+      <div class="service-card">
+        <p><strong>Services:</strong> Ceiling Repair</p>
+        <p><strong>Category:</strong> Light Carpentry</p>
+        <p><strong>Service Provider:</strong> Michael Cruz</p>
+        <p><strong>Date & Time:</strong> January 06, 2025 | 1:00 PM</p>
+        <p><strong>Address:</strong> Bacoor City, Cavite</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Pricing Details</h3>
+        <p><strong>Hours Worked:</strong> <span id="hours-worked">0</span></p>
+        <p>
+          <strong>Rate per Hour:</strong> <span id="rate-per-hour">₱0.00</span>
+        </p>
+        <p><strong>Subtotal:</strong> <span id="subtotal">₱0.00</span></p>
+        <p>
+          <strong>Other Expenses:</strong>
+          <span id="other-expenses">₱0.00</span>
+        </p>
+        <p><strong>Total:</strong> <span id="total">₱0.00</span></p>
+      </div>
+
+      <div class="section white-bg">
+        <h3>Additional Message</h3>
+        <p id="additional-message"></p>
+      </div>
+
+      <button id="confirmButton" class="confirmBtn">Confirm Payment</button>
+    </div>
+
+    <!-- Payment Confirmation Modal -->
+    <div id="paymentConfirmationModal" class="modal">
+      <div class="modal-content">
+        <h3>Payment Confirmation</h3>
+        <p>
+          If you click the confirm button, it means that you have already
+          received the payment and the service is done. The payment is in cash.
+        </p>
+        <div class="modal-actions">
+          <button id="cancelButton" class="cancel-btn">Cancel</button>
+          <button id="confirmPaymentButton" class="confirm-btn">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Completed Modal -->
+    <div id="confirmationModal" class="modal">
+      <div class="modal-content">
+        <div class="close-icon">
+          <a href="service-completed.html"
+            ><img
+              src="https://www.svgrepo.com/show/380138/x-close-delete.svg"
+              alt="close-tab"
+          /></a>
+        </div>
+        <div class="modal-icon">
+          <img
+            src="https://cdn-icons-png.freepik.com/256/10275/10275373.png"
+            alt="Success"
+          />
+        </div>
+        <h3>Service Completed</h3>
+        <p>Congratulations for another successful transaction!</p>
+        <button
+          id="viewRequestsButton"
+          class="view-button"
+          onclick="location='home-no-worker.html'"
+        >
+          View other Requests
+        </button>
+      </div>
+    </div>
+    <script src="summary-script.js"></script>
+  </body>
+</html>
