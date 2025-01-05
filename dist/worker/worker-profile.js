@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("logout-btn").addEventListener("click", function () {
     const confirmLogout = confirm("Are you sure you want to log out?");
     if (confirmLogout) {
-      window.location.href = "worker-login.html";
+      window.location.href = "logged-out.html";
     }
   });
 });
